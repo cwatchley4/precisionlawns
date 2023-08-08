@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Lawns</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/efq7til.css">
+    <script src="https://kit.fontawesome.com/bc134222d9.js" crossorigin="anonymous"></script>
+    <!-- JOBBER CODE BELOW -->
+    <link rel="stylesheet" media="screen" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css"/>
+    <!-- JOBBER CODE ABOVE -->  
+</head>
+<body>
+<!-- JOBBER BUTTON CODE
+    <button name="button" type="button" id="work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153">Book Online</button>
+        <link rel="stylesheet" media="screen" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css"/>
+        <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_dialog_snippet.js" clienthub_id="f9856854-13f6-4580-95ae-9ae7b3983153" form_url="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/public/work_request/embedded_dialog_work_request_form"></script>
+COPY IF NEEDED-->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="logos/Icon.svg" alt="Precision Lawns logo"/></a>
+                <a href="index.html">Precision Lawns</a>
+            </div>
+            <ul class="links">
+                <li><a href="index.html" id="active-nav-link">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/login/new?source=share_login" target="_blank">Client Hub</a></li>
+            </ul>
+            <button name="button" type="button" id="work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153">Free Assessment</button>   
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div class="dropdown-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/login/new?source=share_login" target="_blank">Client Hub</a></li>
+            <li><button name="button" type="button" id="work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153">Free Assessment</button>
+            </li>
+        </div>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle-btn")
+        const toggleBtnIcon = document.querySelector(".toggle-btn i")
+        const dropDownMenu = document.querySelector(".dropdown-menu")
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle("open")
+            const isOpen = dropDownMenu.classList.contains("open")
+
+            toggleBtnIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars"
+        }
+    </script>
+
+<!-- HERO SECTION-->
+
+    <section class="hero">
+        <video autoplay muted loop playsinline src="video/header-background.mp4" type="video/mp4" id="bgvideo"></video>
+        <p>Precision Lawns. Professional lawn care in Canton, IL.</p>
+        <h1>Transforming your lawn. <br> One <span class="actionword2">stripe</span> at a time.</h1>
+        <ul>
+            <li>
+                <a id="hero-button" href="https://www.precisionlawns309.com">Book a Free Assesment</a>
+            </li>
+            <li>
+                <a href="tel: 3092147277">Call Today (309) 214-7277</a>
+            </li>
+        </ul>
+    </section>
+
+<!-- SERVICES SECTION-->
+
+    <section class="services">
+        <header>
+            <h2>Our <span class="actionword">Lawn</span> Care Services</h2>
+            <p>At Precision Lawns, we're here for you whenever you need lawn care in Central Illinois.</p>
+        </header>
+            <div class="figure">
+            <figure class="icon">
+                <i class="fa-regular fa-scissors"></i>
+                <figcaption>Mowing</figcaption>
+            </figure>
+            <figure class="icon">
+                <i class="fa-regular fa-seedling"></i>
+                <figcaption>Seeding</figcaption>
+            </figure>
+            <figure class="icon">
+                <i class="fa-regular fa-wind"></i>
+                <figcaption>Aeration</figcaption>
+            </figure>
+            <figure class="icon">
+                <i class="fa-regular fa-spray-can-sparkles"></i>
+                <figcaption>Weeding</figcaption>
+            </figure>
+        </div>
+        <a href="https://www.precisionlawns309.com">Book a Free Assessment</a>
+    </section>
+
+<!-- GETTING STARTED SECTION-->
+
+    <section class="getting-started">
+        <header>
+            <h2>Getting started is <span class="actionword">simple</span></h2>
+        </header>
+        <div class="figure">
+            <figure class="icon">
+                <figcaption class="step">Step 1</figcaption>
+                <i class="fa-solid fa-arrow-pointer"></i>
+                <figcaption class="cap">Request a <br><span class="actionword">free</span> quote</figcaption>
+            </figure>
+            <figure class="icon">
+                <figcaption class="step">Step 2</figcaption>
+                <i class="fa-solid fa-calendar-days"></i>
+                <figcaption class="cap">Schedule your <br> first <span class="actionword">service</span>
+                </figcaption>
+            </figure>
+            <figure class="icon">
+                <figcaption class="step">Step 3</figcaption>
+                <i class="fa-solid fa-thumbs-up"></i>
+                <figcaption class="cap">Enjoy your <br><span class="actionword">striped</span> lawn</figcaption>
+            </figure>
+        </div>
+        <footer>
+            <h2>Don't wait any longer!</h2>
+            <a href="https://www.precisionlawns309.com">Book a Free Assessment</a>
+        </footer>
+    </section>
+
+<!-- TRANSITION SECTION -->
+
+    <section class="transition">
+        <h2>Enhance the <span class="actionword">Beauty</span> of Your Lawn</h2>
+    </section>
+
+<!-- PROFESSIONAL WORK SECTION -->
+
+    <section class="professional">
+            <div class="text">
+                <div class="article1">
+                    <h2>Small Town Service</h2>
+                    <p>Precision Lawns is a small business that takes pride in serving our local community. As a part of the community, we value the relationships we build with our clients and prioritize exceptional customer service. We  are readily available to address any concerns or questions promptly, and we take the time to understand the unique requirements of each lawn in the local area. With a personalized approach to lawn care, we are able to provide the care and attention that sets small-town businesses apart, building trust and rapport with our clients. When you choose Precision Lawns, you can expect not only professional expertise but also the personalized care of a small business that is deeply committed to serving the local community.</p>
+                </div>
+                <div class="article1">
+                    <h2>Professional Work</h2>
+                    <p>We are dedicated to providing professional services with the utmost expertise and attention to detail. We understand that every lawn is unique and requires individualized care, which is why we meticulously assess each lawn's specific needs and tailor our services accordingly. We use top-of-the-line equipment and techniques to ensure that each lawn receives the highest level of care, resulting in a healthy and vibrant appearance. With a commitment to excellence and a focus on customer satisfaction, we strive to deliver professional service that meets and exceeds my clients' expectations.</p>
+                </div>
+            </div>
+            <div class="img">
+            </div>
+    </section>
+
+<!-- GALLERY SECTION -->
+    
+<!-- NEW REQUEST SECTION -->
+
+<script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_dialog_snippet.js" clienthub_id="f9856854-13f6-4580-95ae-9ae7b3983153" form_url="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/public/work_request/embedded_dialog_work_request_form"></script> 
+
+<!-- FOOTER SECTION -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Lawn Maintanaince</a></li>
+                        <li><a href="#">Landscaping</a></li>
+                        <li><a href="#">Snow Removal</a></li>
+                        <li><a href="#">Holiday Lighting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Book a Job</a></li>
+                        <li><a href="#">Free Asessment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/precisionlawns309" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://linktr.ee/precisionlawns309" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
