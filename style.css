@@ -273,12 +273,25 @@ body {
 
 /* RESPONSIVE HERO */
 
-@media (max-width: 428px) {
+@media (max-width: 590px) {
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     .hero p {
         font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero h1 {
+        font-size: 2rem;
+        padding: 1rem 3rem;
+    }
+    .hero p {
+        font-size: 1.25rem;
+    }
+    .hero li a {
+        font-size: 1rem;
     }
 }
 
