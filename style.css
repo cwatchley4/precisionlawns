@@ -147,7 +147,7 @@ body {
 }
 
 .dropdown-menu.open {
-    height: auto;
+    height: 207px;
     z-index: 1;
 }
 
