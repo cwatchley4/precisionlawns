@@ -299,12 +299,12 @@ body {
 
 .services {
     height: auto;
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 0 2rem;
 }
 
 .services .figure {
@@ -317,14 +317,14 @@ body {
 
 .services h2 {
     font-size: 2.7rem;
-    margin: 3rem 1rem 1rem;
+    margin: 5rem 2% 1rem;
     text-transform: uppercase;
     font-weight: 700;
 }
 
 .services p {
     font-size: 1rem;
-    margin: 0 1rem 1rem;
+    margin: 0 1rem;
 }
 
 .services .icon {
@@ -346,7 +346,7 @@ body {
 }
 
 .services a {
-    margin: 1rem 1rem 3rem;
+    margin: 1rem 1rem 5rem;
     background-color: #53ae4d;
     color: white;
     padding: .5rem 1rem;
@@ -400,7 +400,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0;
+    margin: 4rem 0;
 }
 
 .getting-started .figure:last-child {
@@ -503,7 +503,7 @@ body {
 }
 
 .transition h2 {
-    font-size: 7vw;
+    font-size: 10vw;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     text-transform: uppercase;
     font-weight: 700;
