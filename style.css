@@ -662,6 +662,17 @@ footer .container .row .footer-col h4 {
     color: #265023
 }
 
+footer .copyright {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #333;
+}
+
+footer .copyright a {
+    color: #53ae4d;
+}
+
 /* FOOTER RESONSIVE DESIGN */
 
 @media (max-width: 694px) {
