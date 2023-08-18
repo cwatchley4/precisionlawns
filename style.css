@@ -560,7 +560,7 @@ body {
 /* REVIEWS SECTION */
 
 .reviews {
-    margin: 3rem 4rem;
+    margin: 3rem 4rem 0;
 }
 
 .reviews h2 {
@@ -593,6 +593,100 @@ body {
     margin: 0 2rem;
     text-align: center;
     color: white;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.contact header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact header h2 {
+    font-size: 3rem;
+    color: #53AE4D;
+    text-transform: uppercase;
+}
+
+.contact .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.contact .contact-form-container {
+    background-color:#53AE4D;
+    padding: 4rem;
+    margin: 1rem auto 2rem auto;
+    max-width: 50rem;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.08);
+    transition: .3s ease-in-out;
+}
+
+.contact .contact-form-container:hover {
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.15);
+}
+
+.contact .contact-form-container .contact-form {
+    display: block;
+}
+
+.contact .contact-form-container .contact-form .contact-form-field {
+    margin-bottom: 2rem;
+}
+
+.contact .contact-form-container .contact-form .contact-form-field .contact-form-label {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: left;
+}
+
+.contact .contact-form-container .contact-form .contact-form-field .contact-form-input {
+    color: #53AE4D;
+    padding: 1.5rem;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    font-size: 1rem;
+    letter-spacing: 0;
+    background: #f0f0f0;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* CONTACT SECTION RESPONSIVE DESIGN */
+
+@media (max-width: 1133px) {
+    .contact .container {
+        flex-direction: column;
+    }
+    .contact .container .contact-form {
+        min-width: 300px;
+        justify-content: center;
+    }
+    .contact .container .contact-info {
+        min-width: 300px;
+        justify-content: center;
+    }
 }
 
 
@@ -717,7 +811,7 @@ footer .copyright a:hover {
 
 /*CONTACT INFO BELOW*/
 
-.contact {
+/* .contact {
     position: relative;
     display: flex;
     justify-content: center;
@@ -864,7 +958,7 @@ footer .copyright a:hover {
 
 /* CONTACT SECTION RESPONSIVE DESIGN */
 
-@media (max-width: 1133px) {
+/* @media (max-width: 1133px) {
     .contact .container {
         flex-direction: column;
     }
@@ -877,7 +971,7 @@ footer .copyright a:hover {
         min-width: 300px;
         justify-content: center;
     }
-}
+} */
 
 /* NEW REQUEST SECTION */
 
