@@ -43,12 +43,27 @@ body {
     text-transform: uppercase;
 }
 
-.button:hover {
+.button:hover, .button-inv:hover {
     scale: 1.05;
 }
 
-.button:active {
+.button:active, .button-inv:active {
     scale: .95;
+}
+
+.button-inv {
+    background-color: white;
+    color: #53ae4d;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: scale .2s ease;
+    text-transform: uppercase;
+    display: inline-block;
 }
 
 /* Header Below */
@@ -320,7 +335,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 2.5rem;
     background-image: url(backgrounds/stripes-bg2.jpg);
 }
 
@@ -328,20 +343,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .services .figure1 {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .services .figure2 {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -372,6 +386,10 @@ body {
     text-transform: uppercase;
     font-weight: 600;
     color: #53AE4D;
+}
+
+.services .icon .soon {
+    font-size: .5rem;
 }
 
 .services a {
@@ -405,58 +423,51 @@ body {
     }
 }
 
-/* TRANSITION 1 SECTION */
+/* PROFESSIONAL WORK SECTION */
 
-.transition1 {
-    display: flex;
-    width: 100vw;
-    background-color: #53AE4D;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem 1rem;
-    text-align: center;
+.professional {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem;
+    background: #53AE4D;
 }
 
-.transition1 h2 {
-    font-size: 2rem;
-    margin: .5rem 1rem;
+.professional .article {
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.professional h2 {
+    font-size: 2.25rem;
     text-transform: uppercase;
     font-weight: 700;
-    text-align: center;
-    color: white;
+    text-align: left;
+    margin-bottom: .5rem;
+    color: #53AE4D
 }
 
-.transition1 a {
-    margin: .5rem 1rem;
-    background-color: white;
-    color: #53ae4d;
-    padding: .5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: scale .2s ease;
+.professional p {
+    font-size: 1rem;
+    color:#53AE4D;
 }
 
-.transition1 a:hover {
-    scale: 1.05;
-}
+/* PROFESSIONAL RESPONSIVE DESIGN */
 
-.transition1 a:active {
-    scale: .95;
-}
-
-/* TRANSITION 2 RESPONSIVE DESIGN */
-
-@media (min-width: 956px) {
-    .transition1 {
-        flex-direction: row;
+@media (min-width: 850px) {
+    .professional {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
     }
 }
+
+@media (max-width: 460px) {
+    .professional h2 {
+        font-size: 1.5rem;
+    }
+}
+
 
 /* GETTING STARTED SECTION */
 
@@ -524,11 +535,68 @@ body {
     .getting-started .figure {
         flex-direction: row;
     }
+    .getting-started .icon:last-child {
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* CTA SECTION */
+
+.cta {
+    display: flex;
+    width: 100vw;
+    background-color: #53AE4D;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin: .5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+.cta a {
+    margin: .5rem 1rem;
+    background-color: white;
+    color: #53ae4d;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: scale .2s ease;
+}
+
+.cta a:hover {
+    scale: 1.05;
+}
+
+.cta a:active {
+    scale: .95;
+}
+
+/* CTA RESPONSIVE DESIGN */
+
+@media (min-width: 956px) {
+    .cta {
+        flex-direction: row;
+    }
 }
 
 /* TRANSITION 2 SECTION */
 
-.transition2 {
+.transition {
     width: 100%;
     min-height: 75vh;
     position: relative;
@@ -542,7 +610,7 @@ body {
     /* background-attachment: fixed; */
 }
 
-.transition2 h2 {
+.transition h2 {
     font-size: 7vw;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     text-transform: uppercase;
@@ -552,77 +620,6 @@ body {
     color: white;
 }
 
-/* PROFESSIONAL WORK SECTION */
-
-.professional {
-    height: auto;
-    width: 100vw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding: 3rem;
-    background: #216B33;
-}
-
-.professional .text {
-    max-width: 500px;
-    margin-right: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.professional .text .article1 {
-    margin-bottom: 2rem;
-}
-
-.professional .text a {
-    max-width: fit-content;
-}
-
-.professional .img {
-    width: 50vw;
-    height: 500px;
-    min-width: 415px;
-    border-radius: 15px;
-    margin-left: 1rem;
-    background-image: url(photos/ventrac.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.professional h2 {
-    font-size: 2.25rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: left;
-    margin-bottom: .5rem;
-    color: #7EC08E;
-}
-
-.professional p {
-    font-size: 1rem;
-    text-align: left;
-    color: white;
-}
-
-/* PROFESSIONAL RESPONSIVE DESIGN */
-
-@media (max-width: 1013px) {
-    .professional .img {
-        display: none;
-    }
-    .professional .text {
-        width: 80vw;
-        max-width: none;
-    }
-    .professional .text p {
-        color: white;
-    }
-
-}
-
-/* GALLERY SECTION */
 
 /* FOOTER SECTION */
 
@@ -1175,15 +1172,15 @@ footer .copyright a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(photos/mom-and-dad.jpg);
-    background-color: rgba(0, 0, 0, .5);
-    background-blend-mode: darken;
+    background-image: url(photos/ventrac.jpg);
+    background-color: rgba(0, 0, 0, .2);
+    /* background-blend-mode: darken; */
     background-size: cover;
     background-position: center;
 }
 
 .about-hero h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     text-transform: uppercase;
     font-weight: 800;
     text-align: center;
@@ -1191,26 +1188,9 @@ footer .copyright a {
     color: white;
 }
 
-/* INTRODUCTION SECTION DESIGN */
-
-.intro {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
+.about-hero p {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
 }
 
-.intro header h2 {
-    font-size: 3rem;
-}
-
-.intro article {
-    max-width: 600px;
-    margin: 0 5rem;
-}
-
-.intro article p {
-    margin: 1rem 0;
-}
