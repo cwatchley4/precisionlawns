@@ -335,7 +335,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 4rem 2rem 2.5rem;
+    padding: 4rem 2rem;
 }
 
 .services .figure-container {
@@ -560,11 +560,16 @@ body {
 /* REVIEWS SECTION */
 
 .reviews {
-    margin: 3rem 4rem 0;
+    padding: 3rem 4rem 0;
+    background-color: #F0F0F0;
+}
+
+.reviews header {
+    margin-bottom: 1rem;
 }
 
 .reviews h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -603,20 +608,16 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
+    padding: 4rem 2rem;
 }
 
 .contact header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .contact header h2 {
     font-size: 3rem;
-    color: #53AE4D;
+    color: #333;
     text-transform: uppercase;
 }
 
@@ -693,7 +694,7 @@ body {
 /* FOOTER SECTION */
 
 footer {
-    background-color: #F0F0F0;
+    background-color: #53AE4D;
     padding: 2rem 2rem;
 }
 
@@ -712,7 +713,7 @@ footer .container .row .footer-col hr {
     width: 2rem;
     margin: 1rem 0;
     text-align: center;
-    color: #333;
+    color: white;
 }
 
 footer .container .row .footer-col {
@@ -728,12 +729,12 @@ footer .container .row .footer-col {
 footer .container .row .footer-col h4 {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #265023;
+    color: white;
 }
 
 .footer-col ul li {
     margin: 1rem 0;
-
+    color: white;
 }
 
 .footer-col ul li:first-child {
@@ -747,7 +748,7 @@ footer .container .row .footer-col h4 {
 .footer-col ul li a {
     font-size: 1rem;
     text-transform: capitalize;
-    color: #53AE4D;
+    color: white;
     font-weight: 500;
     display: block;
     transition: .3s ease;
@@ -763,7 +764,7 @@ footer .container .row .footer-col h4 {
 }
 
 .footer-col .social-links i {
-    color: #53AE4D;
+    color: white;
     font-size: 2rem;
     margin: 0 .5rem .5rem;
     transition: .3s ease;
@@ -782,11 +783,11 @@ footer .copyright {
     font-size: 1rem;
     text-align: center;
     margin-top: 2rem;
-    color: #333;
+    color: white;
 }
 
 footer .copyright a {
-    color: #53ae4d;
+    color: white;
 }
 
 footer .copyright a:hover {
