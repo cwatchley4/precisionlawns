@@ -1060,6 +1060,15 @@ footer .copyright a:hover {
     }
 }
 
+@media(hover: none) {
+    .cards .card p {
+        translate: 0 0;
+    }
+    .cards .card h3 {
+        translate: 0 0;
+    }
+}
+
 /* ABOUT PAGE */
 
 /* ABOUT PAGE HERO DESIGN */
