@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -1102,47 +1103,258 @@ footer .copyright a:hover {
     font-size: 2rem;
 }
 
-/* PROFESSIONAL WORK SECTION */
 
-.professional {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
-    padding: 4rem 2rem;
-    background-image: url(backgrounds/stripes-bg2.jpg);
+/* SMALL TOWN SERVICE SECTION */
+
+.small-town-service {
+    margin: 4rem 2rem;
 }
 
-.professional .article {
-    padding: 2rem;
-    border-radius: 15px;
-    background-color: white;
+.small-town-service header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    margin: 2rem 0;
 }
 
-.professional h2 {
-    font-size: 2.25rem;
+.small-town-service header h2 {
+    font-size: 3rem;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: 700;
-    text-align: left;
-    margin-bottom: .5rem;
-    color: #53AE4D
 }
 
-.professional p {
-    font-size: 1rem;
-    color:#53AE4D;
+.small-town-service .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
-/* PROFESSIONAL RESPONSIVE DESIGN */
+.small-town-service .container .text {
+    padding: 1rem;
+    color: #333;
+    background-color: #f6f4f4;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+}
 
-@media (min-width: 850px) {
-    .professional {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: none;
+.small-town-service .container .text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.small-town-service .container .text p {
+    font-size: 1.25rem;
+}
+
+.small-town-service .container .image {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.small-town-service .container .image img {
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+}
+
+/* SMALL TOWN SERVICE RESPONSIVE DESIGN */
+
+@media (min-width: 865px) {
+    .small-town-service .container {
+        flex-direction: row;
+    }
+    .small-town-service .container .image {
+        margin-bottom: 0;
+    }
+    .small-town-service .container .text {
+        text-align: left;
     }
 }
 
-@media (max-width: 460px) {
-    .professional h2 {
-        font-size: 1.5rem;
+/* PROFESSIONAL WORK SECTION */
+
+.professional-work {
+    margin: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.professional-work header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    margin: 2rem 0;
+}
+
+.professional-work header h2 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.professional-work .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.professional-work .container .text {
+    padding: 1rem;
+    color: #333;
+    background-color: #f6f4f4;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.professional-work .container .text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.professional-work .container .text p {
+    font-size: 1.25rem;
+}
+
+.professional-work .container .image {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.professional-work .container .image img {
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+}
+
+.professional-work a {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* PROFESSONAL WORK RESPONSIVE DESIGN */
+
+@media (min-width: 865px) {
+    .professional-work .container {
+        flex-direction: row-reverse;
+    }
+    .professional-work .container .image {
+        margin-bottom: 0;
+    }
+    .professional-work .container .text {
+        text-align: left;
+    }
+}
+
+/* CONTACT ABOUT SECTION */
+
+.contact-about {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 2rem 4rem;
+}
+
+.contact-about header {
+    margin-bottom: 2rem;
+}
+
+.contact-about header h2 {
+    font-size: 3rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.contact-about .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.contact-about .contact-form-container {
+    background-color:#53AE4D;
+    padding: 4rem;
+    margin: 1rem auto 2rem auto;
+    max-width: 50rem;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.08);
+    transition: .3s ease-in-out;
+}
+
+.contact-about .contact-form-container:hover {
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.15);
+}
+
+.contact-about .contact-form-container .contact-form {
+    display: block;
+}
+
+.contact-about .contact-form-container .contact-form .contact-form-field {
+    margin-bottom: 2rem;
+}
+
+.contact-about .contact-form-container .contact-form .contact-form-field .contact-form-label {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: left;
+}
+
+.contact-about .contact-form-container .contact-form .contact-form-field .contact-form-input {
+    color: #53AE4D;
+    padding: 1.5rem;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    font-size: 1rem;
+    letter-spacing: 0;
+    background: #f0f0f0;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* CONTACT ABOUT SECTION RESPONSIVE DESIGN */
+
+@media (max-width: 1133px) {
+    .contact-about .container {
+        flex-direction: column;
+    }
+    .contact-about .container .contact-form {
+        min-width: 300px;
+        justify-content: center;
+    }
+    .contact-about .container .contact-info {
+        min-width: 300px;
+        justify-content: center;
     }
 }
