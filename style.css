@@ -697,7 +697,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 4rem 2rem;
+    padding: 0rem 2rem 4rem;
 }
 
 .contact header {
