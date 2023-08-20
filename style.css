@@ -175,7 +175,7 @@ body {
 }
 
 .dropdown-menu.open {
-    height: 167.56px;
+    height: 209.45px;
     z-index: 1;
 }
 
@@ -199,7 +199,7 @@ body {
 
 /* RESPONSIVE NAV */
 
-@media (max-width:765px) {
+@media (max-width:880px) {
     .navbar .links {
         display: none;
         color: #53AE4D;
@@ -323,7 +323,7 @@ body {
 }
 
 .winter-header .dropdown-menu.open {
-    height: 167.56px;
+    height: 209.45px;
     z-index: 1;
 }
 
@@ -347,7 +347,7 @@ body {
 
 /* RESPONSIVE WINTER THEMED NAV */
 
-@media (max-width:765px) {
+@media (max-width:880px) {
     .winter-header .navbar .links {
         display: none;
         color: #71B5E4;
@@ -890,6 +890,122 @@ footer .copyright a:hover {
         flex-direction: row;
     }
     footer .container .row .footer-col {
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+/* WINTER SECTION */
+
+.winter-footer {
+    background-color: #71B5E4;
+    padding: 2rem 2rem;
+}
+
+.winter-footer .container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.winter-footer .container .row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.winter-footer .container .row .footer-col hr {
+    width: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: white;
+}
+
+.winter-footer .container .row .footer-col {
+    width: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.winter-footer .container .row .footer-col h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.winter-footer .footer-col ul li {
+    margin: 1rem 0;
+    color: white;
+}
+
+.winter-footer .footer-col ul li:first-child {
+    margin-top: 0;
+}
+
+.winter-footer .footer-col ul li:last-child {
+    margin-bottom: 0;
+}
+
+.winter-footer .footer-col ul li a {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 500;
+    display: block;
+    transition: .3s ease;
+}
+
+.winter-footer .footer-col ul li a:hover {
+    color: #333;
+}
+
+.winter-footer .footer-col .social-links {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.winter-footer .footer-col .social-links i {
+    color: white;
+    font-size: 2rem;
+    margin: 0 .5rem .5rem;
+    transition: .3s ease;
+}
+
+.winter-footer .footer-col .social-links i:first-child {
+    margin-top: .3rem;
+    margin-left: 0;
+}
+
+.winter-footer .footer-col .social-links i:hover {
+    color: #333;
+}
+
+.winter-footer .copyright {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+}
+
+.winter-footer .copyright a {
+    color: white;
+}
+
+.winter-footer .copyright a:hover {
+    color: #333;
+}
+
+/* WINTER FOOTER RESONSIVE DESIGN */
+
+@media (min-width: 600px) {
+    .winter-footer .container .row {
+        flex-direction: row;
+    }
+    .winter-footer .container .row .footer-col {
         text-align: left;
         justify-content: flex-start;
         align-items: flex-start;
