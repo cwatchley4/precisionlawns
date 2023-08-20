@@ -16,7 +16,11 @@ body {
     color: #53AE4D;
 }
 
-#work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153 {
+.actionword-winter {
+    color: #71B5E4;
+}
+
+/* #work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153 {
     background-color: #53ae4d;
     color: white;
     padding: .5rem 1rem;
@@ -28,7 +32,7 @@ body {
     cursor: pointer;
     transition: scale .2s ease;
     text-transform: uppercase;
-}
+} */
 
 .button {
     background-color: #53ae4d;
@@ -155,15 +159,6 @@ body {
     display: none;
 }
 
-#work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153:hover {
-    scale: 1.05;
-    color: white;
-}
-
-#work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153:active {
-    scale: .95;
-}
-
 /* DROPDOWN MENU */
 .dropdown-menu {
     display: none;
@@ -202,23 +197,12 @@ body {
     scale: 1.05;
 }
 
-.dropdown-menu #work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153 {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    color: #53AE4D;
-    background-color: white;
-}
-
 /* RESPONSIVE NAV */
 
 @media (max-width:765px) {
     .navbar .links {
         display: none;
         color: #53AE4D;
-    }
-    .navbar #work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153 {
-        display: none;
     }
     .navbar .toggle-btn {
         display: block;
@@ -231,6 +215,154 @@ body {
 
 @media (max-width: 576px) {
     .dropdown-menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* WINTER THEMED NAV */
+
+.winter-header {
+    position: relative;
+    padding: 0 2rem;
+    background-color: white;
+}
+
+.winter-header .navbar {
+    width: 100%;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.winter-header .navbar a {
+    color:#71B5E4;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.winter-header .navbar a:hover {
+    transition: .2s;
+}
+
+.winter-header .navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.winter-header .navbar .logo img {
+    width: 4rem;
+}
+
+.winter-header .navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "mrs-eaves", serif;
+    text-transform: capitalize;
+}
+
+.winter-header .navbar .links {
+   display: flex;
+   gap: 2rem;
+}
+
+.winter-header .navbar .links a {
+    position: relative;
+}
+
+.winter-header .navbar .links a:after {
+    content: "";
+    position: absolute;
+    background-color: #71B5E4;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: .3s;
+}
+
+#active-nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: #71B5E4;
+    height: 3px;
+    width: 100;
+    left: 0;
+    bottom: -10px;
+    transition: .3s;
+}
+
+.winter-header .navbar .links a:hover:after {
+    width: 100%;
+}
+
+.winter-header .navbar .toggle-btn {
+    color: #71B5E4;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* DROPDOWN MENU */
+.winter-header .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: #71B5E4;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+.winter-header .dropdown-menu.open {
+    height: 167.56px;
+    z-index: 1;
+}
+
+.winter-header .dropdown-menu li {
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.winter-header .dropdown-menu a {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.winter-header .dropdown-menu a:hover {
+    scale: 1.05;
+}
+
+/* RESPONSIVE WINTER THEMED NAV */
+
+@media (max-width:765px) {
+    .winter-header .navbar .links {
+        display: none;
+        color: #71B5E4;
+    }
+    .winter-header .navbar .toggle-btn {
+        display: block;
+    }
+
+    .winter-header .dropdown-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .winter-header .dropdown-menu {
         left: 2rem;
         width: unset;
     }
@@ -1354,6 +1486,321 @@ footer .copyright a:hover {
         justify-content: center;
     }
     .contact-about .container .contact-info {
+        min-width: 300px;
+        justify-content: center;
+    }
+}
+
+/* WINTER PAGE */
+
+/* WINTER PAGE HERO DESIGN */
+
+.winter-hero {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(backgrounds/snow.jpeg);
+    background-color: rgba(0, 0, 0, .1);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+}
+
+.winter-hero h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+}
+
+.winter-hero p {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+/* SMALL TOWN SERVICE SECTION */
+
+.snow-removal {
+    margin: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.snow-removal header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    margin: 2rem 0;
+}
+
+.snow-removal header h2 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.snow-removal .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.snow-removal .container .text {
+    padding: 1rem;
+    color: #333;
+    background-color: #f6f4f4;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.snow-removal .container .text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.snow-removal .container .text p {
+    font-size: 1.25rem;
+}
+
+.snow-removal .container .image {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.snow-removal .container .image img {
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+}
+
+.snow-removal a {
+    font-size: 2rem;
+    background-color: #71B5E4;
+    margin-top: 2rem;
+}
+
+/* SNOW REMOVAL RESPONSIVE DESIGN */
+
+@media (min-width: 865px) {
+    .snow-removal .container {
+        flex-direction: row;
+    }
+    .snow-removal .container .image {
+        margin-bottom: 0;
+    }
+    .snow-removal .container .text {
+        text-align: left;
+    }
+}
+
+/* HOLIDAY LIGHTING WORK SECTION */
+
+.holiday-lighting {
+    margin: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.holiday-lighting header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    margin: 2rem 0;
+}
+
+.holiday-lighting header h2 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.holiday-lighting .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.holiday-lighting .container .text {
+    padding: 1rem;
+    color: #333;
+    background-color: #f6f4f4;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.holiday-lighting .container .text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.holiday-lighting .container .text p {
+    font-size: 1.25rem;
+}
+
+.holiday-lighting .container .image {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.holiday-lighting .container .image img {
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+}
+
+/* HOLIDAY LIGHTING RESPONSIVE DESIGN */
+
+@media (min-width: 865px) {
+    .holiday-lighting .container {
+        flex-direction: row-reverse;
+    }
+    .holiday-lighting .container .image {
+        margin-bottom: 0;
+    }
+    .holiday-lighting .container .text {
+        text-align: left;
+    }
+}
+
+/* CONTACT WINTER SECTION */
+
+.contact-winter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 2rem 4rem;
+}
+
+.contact-winter header {
+    margin-bottom: 2rem;
+}
+
+.contact-winter header h2 {
+    font-size: 3rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.contact-winter .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.contact-winter .contact-form-container {
+    background-color:#71B5E4;
+    padding: 4rem;
+    margin: 1rem auto 2rem auto;
+    max-width: 50rem;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.08);
+    transition: .3s ease-in-out;
+}
+
+.contact-winter .contact-form-container:hover {
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.15);
+}
+
+.contact-winter .contact-form-container .contact-form {
+    display: block;
+}
+
+.contact-winter .contact-form-container .contact-form .contact-form-field {
+    margin-bottom: 2rem;
+}
+
+.contact-winter .contact-form-container .contact-form .contact-form-field .contact-form-label {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: left;
+}
+
+.contact-winter .contact-form-container .contact-form .contact-form-field .contact-form-input {
+    color: #71B5E4;
+    padding: 1.5rem;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    font-size: 1rem;
+    letter-spacing: 0;
+    background: #f0f0f0;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.contact-winter .contact-form-container button {
+    background-color: white;
+    color: #71B5E4;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: scale .2s ease;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.contact-winter .contact-form-container button:hover {
+    scale: 1.05;
+}
+
+.contact-winter .contact-form-container button:active {
+    scale: .95;
+}
+
+/* CONTACT ABOUT SECTION RESPONSIVE DESIGN */
+
+@media (max-width: 1133px) {
+    .contact-winter .container {
+        flex-direction: column;
+    }
+    .contact-winter .container .contact-form {
+        min-width: 300px;
+        justify-content: center;
+    }
+    .contact-winter .container .contact-info {
         min-width: 300px;
         justify-content: center;
     }
