@@ -24,3 +24,38 @@ document.querySelector("main").addEventListener("click", function () {
   dropDownMenu.classList.remove("open");
   changeDropDownMenuIcon();
 });
+
+// Modal
+
+const closeModalButton = document.querySelector(".close-modal");
+const modal = document.querySelector(".modal");
+const modalOverlay = document.querySelector(".modal-overlay");
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  modalOverlay.classList.add("hidden");
+  document.querySelector("body").classList.remove("no-scroll");
+};
+
+const openModal = function () {
+  modal.classList.remove("hidden");
+  modalOverlay.classList.remove("hidden");
+  document.querySelector("body").classList.add("no-scroll");
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  openModal();
+});
+
+if (!modal.classList.contains("hidden")) {
+  closeModalButton.addEventListener("click", function () {
+    closeModal();
+  });
+  document.querySelector("body").addEventListener("click", function () {
+    closeModal();
+  });
+}
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+});
