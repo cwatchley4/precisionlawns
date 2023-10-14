@@ -31,30 +31,28 @@ const closeModalButton = document.querySelector(".close-modal");
 const modal = document.querySelector(".modal");
 const modalOverlay = document.querySelector(".modal-overlay");
 
-const userHasViewedModal = function () {
-  console.log("modal viewed");
-  return sessionStorage.getItem("viewedModal") === "true";
-};
-
 const closeModal = function () {
   modal.classList.add("hidden");
   modalOverlay.classList.add("hidden");
   document.querySelector("body").classList.remove("no-scroll");
-  sessionStorage.setItem("viewedModal", "true");
 };
+
+console.log(sessionStorage);
 
 const openModal = function () {
-  if (!userHasViewedModal()) {
-    modal.classList.remove("hidden");
-    modalOverlay.classList.remove("hidden");
-    document.querySelector("body").classList.add("no-scroll");
-    userHasViewedModal();
-  }
+  modal.classList.remove("hidden");
+  modalOverlay.classList.remove("hidden");
+  document.querySelector("body").classList.add("no-scroll");
 };
 
+// DOM loads the modal
+
 document.addEventListener("DOMContentLoaded", function () {
-  openModal();
+  if (!sessionStorage.getItem("viewedModal")) openModal();
+  sessionStorage.setItem("viewedModal", "true");
 });
+
+// Close button, click body, and escape key closes the modal
 
 if (!modal.classList.contains("hidden")) {
   closeModalButton.addEventListener("click", function () {
