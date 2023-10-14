@@ -31,16 +31,24 @@ const closeModalButton = document.querySelector(".close-modal");
 const modal = document.querySelector(".modal");
 const modalOverlay = document.querySelector(".modal-overlay");
 
+const userHasViewedModal = function () {
+  console.log("modal viewed");
+  return sessionStorage.getItem("viewedModal") === "true";
+};
+
 const closeModal = function () {
   modal.classList.add("hidden");
   modalOverlay.classList.add("hidden");
   document.querySelector("body").classList.remove("no-scroll");
+  sessionStorage.setItem("viewedModal", "true");
 };
 
 const openModal = function () {
-  modal.classList.remove("hidden");
-  modalOverlay.classList.remove("hidden");
-  document.querySelector("body").classList.add("no-scroll");
+  if (!userHasViewedModal()) {
+    modal.classList.remove("hidden");
+    modalOverlay.classList.remove("hidden");
+    document.querySelector("body").classList.add("no-scroll");
+  }
 };
 
 document.addEventListener("DOMContentLoaded", function () {
