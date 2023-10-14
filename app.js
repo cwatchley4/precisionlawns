@@ -48,6 +48,7 @@ const openModal = function () {
     modal.classList.remove("hidden");
     modalOverlay.classList.remove("hidden");
     document.querySelector("body").classList.add("no-scroll");
+    userHasViewedModal();
   }
 };
 
