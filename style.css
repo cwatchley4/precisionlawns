@@ -50,18 +50,50 @@ body {
 }
 
 .button:hover,
-.button-inv:hover {
+.button-inv:hover,
+.button-winter:hover {
   scale: 1.05;
 }
 
 .button:active,
-.button-inv:active {
+.button-inv:active,
+.button-winter:active {
   scale: 0.95;
 }
 
 .button-inv {
   background-color: white;
   color: #53ae4d;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.button-winter {
+  background-color: #71b5e4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.button-winter-inv {
+  background-color: white;
+  color: #71b5e4;
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
@@ -1762,13 +1794,18 @@ footer .copyright a:hover {
   align-items: center;
 }
 
+.snow-removal .container .text-calc {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .snow-removal .container .text {
   padding: 1rem;
   color: #333;
   background-color: #f6f4f4;
   border-radius: 15px;
   max-width: 500px;
-  text-align: center;
 }
 
 .snow-removal .container .text h2 {
@@ -1779,6 +1816,74 @@ footer .copyright a:hover {
 
 .snow-removal .container .text p {
   font-size: 1.25rem;
+}
+
+.snow-removal .container .estimate-calculator {
+  padding: 1rem;
+  color: #333;
+  background-color: #f6f4f4;
+  border-radius: 15px;
+  max-width: 500px;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.snow-removal .container .estimate-calculator h3 {
+  margin-bottom: 0.5rem;
+}
+
+.snow-removal .container .estimate-calculator .cost-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.snow-removal .container .estimate-calculator .cost-message .message {
+  margin-right: 0.5rem;
+}
+
+.snow-removal .container .estimate-calculator .inches-of-snow,
+.salt {
+  margin: 0.5rem 0;
+}
+
+.snow-removal .container .estimate-calculator .calculate-button {
+  display: flex;
+  margin: 0.5rem auto;
+}
+
+.snow-removal .container .estimate-calculator .length-label,
+.inches-label {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.snow-removal .container .estimate-calculator #length,
+#inches {
+  color: #71b5e4;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ebebeb;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  background: #f0f0f0;
+  border-radius: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.snow-removal .container .estimate-calculator #length::placeholder,
+#inches::placeholder {
+  font-size: 1rem;
+  color: #cbcbcb;
+}
+
+.snow-removal .container .estimate-calculator .cost {
+  font-weight: 700;
 }
 
 .snow-removal .container .image {
@@ -1805,15 +1910,12 @@ footer .copyright a:hover {
 
 /* SNOW REMOVAL RESPONSIVE DESIGN */
 
-@media (min-width: 865px) {
+@media (min-width: 1025px) {
   .snow-removal .container {
     flex-direction: row;
   }
   .snow-removal .container .image {
     margin-bottom: 0;
-  }
-  .snow-removal .container .text {
-    text-align: left;
   }
 }
 

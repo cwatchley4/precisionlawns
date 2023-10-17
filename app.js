@@ -54,15 +54,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Close button, click body, and escape key closes the modal
 
-if (!modal.classList.contains("hidden")) {
-  closeModalButton.addEventListener("click", function () {
-    closeModal();
-  });
-  document.querySelector("body").addEventListener("click", function () {
-    closeModal();
-  });
+if (document.querySelector(".modal")) {
+  if (!modal.classList.contains("hidden")) {
+    closeModalButton.addEventListener("click", function () {
+      closeModal();
+    });
+    document.querySelector("body").addEventListener("click", function () {
+      closeModal();
+    });
+  }
 }
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+});
+
+// Snow Removal Calculator
+
+const lengthOfDriveway = document.querySelector("#length");
+const inchesOfSnow = document.querySelector("#inches");
+const saltingCheck = document.querySelector("#checkbox");
+const calcButton = document.querySelector(".calculate-button");
+const cost = document.querySelector(".cost");
+const message = document.querySelector(".message");
+
+const calcPlowDrive = function () {
+  if (!lengthOfDriveway.value || !inchesOfSnow.value) {
+    message.textContent = "Enter numbers for driveway length and snow depth!";
+    return NaN;
+  } else {
+    message.textContent = "Your snow removal would cost about:";
+    if (cost.classList.contains("hidden")) cost.classList.remove("hidden");
+    if (inchesOfSnow.value <= 6) {
+      cost.textContent = `$${65}`;
+      return 65;
+    } else {
+      cost.textContent = `$${95}`;
+      return 95;
+    }
+  }
+};
+
+calcButton.addEventListener("click", function () {
+  if (!saltingCheck.checked) {
+    calcPlowDrive();
+  } else {
+    const costWithoutSalting = calcPlowDrive();
+    cost.textContent = `$${costWithoutSalting + costWithoutSalting * 0.1}`;
+  }
 });
