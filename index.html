@@ -59,8 +59,32 @@
 
       gtag("config", "G-Y22RPT6MQG");
     </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PRRH5KGZ");
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PRRH5KGZ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="modal">
       <i class="close-modal fa-solid fa-xmark"></i>
       <div class="text">
@@ -108,22 +132,6 @@
       clienthub_id="f9856854-13f6-4580-95ae-9ae7b3983153"
       form_url="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/public/work_request/embedded_dialog_work_request_form"
     ></script>
-
-    <!-- HAMBURGER MENU JAVASCRIPT -->
-    <!-- <script>
-        const toggleBtn = document.querySelector(".toggle-btn")
-        const toggleBtnIcon = document.querySelector(".toggle-btn i")
-        const dropDownMenu = document.querySelector(".dropdown-menu")
-
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle("open")
-            const isOpen = dropDownMenu.classList.contains("open")
-
-            toggleBtnIcon.classList = isOpen
-            ? "fa-solid fa-xmark"
-            : "fa-solid fa-bars"
-        }
-    </script> -->
 
     <!-- HERO SECTION-->
     <main>
@@ -226,15 +234,19 @@
 
       <!-- REVIEWS SECTION -->
 
-      <!-- <section class="reviews">
-    <header>
-        <h2>What our <span class="actionword">Customers</span> Say</h2>
-    </header>
-    <div class="widget">
-        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-2dad0685-7035-415f-8b95-16784c86d16a"></div>
-    </div>
-</section> -->
+      <section class="reviews">
+        <header>
+          <h2>What our <span class="actionword">Customers</span> Say</h2>
+        </header>
+        <div class="widget">
+          <script
+            src="https://static.elfsight.com/platform/platform.js"
+            data-use-service-core
+            defer
+          ></script>
+          <div class="elfsight-app-2dad0685-7035-415f-8b95-16784c86d16a"></div>
+        </div>
+      </section>
 
       <!-- CONTACT SECTION -->
 
