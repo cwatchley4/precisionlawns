@@ -1750,6 +1750,39 @@ footer .copyright a:hover {
 
 /* BLOG PAGE */
 
+/* BLOG HERO */
+
+.blog-hero {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(photos/stripes1.jpeg);
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.blog-hero h1 {
+  color: white;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.blog-hero p {
+  color: white;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+
+.blog-hero .button {
+  font-size: 1.5rem;
+}
+
 /* BLOG SEARCH SECTION */
 
 .blog-search {
@@ -1769,17 +1802,21 @@ footer .copyright a:hover {
 
 .search-form i {
   margin-right: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .search-form input {
   border: none;
-  font-size: 2rem;
-  width: 300px;
+  font-size: 1.5rem;
+  width: 200px;
 }
 
 .search-form input:focus {
   outline: none;
+}
+
+.sort-btn-container button {
+  font-size: 0.7rem;
 }
 
 /* BLOG GRID SECTION */
@@ -1847,16 +1884,6 @@ footer .copyright a:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 800px) {
-  .blog-grid .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  /* .blog-grid .grid-container .blog-post {
-    max-width: 540px;
-    max-height: 540px;
-  } */
-}
-
 /* SUBSCRIBE SECTION */
 
 .blog-subscribe {
@@ -1899,6 +1926,44 @@ footer .copyright a:hover {
 
 .blog-subscribe input:focus {
   outline: none;
+}
+
+/* BLOG PAGE RESPONSIVE DESIGN  */
+
+@media (min-width: 610px) {
+  .blog-grid .grid-container {
+    gap: 1rem;
+  }
+  .blog-hero p br {
+    display: none;
+  }
+  .sort-btn-container button {
+    font-size: 1rem;
+  }
+  .search-form i {
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+
+  .search-form input {
+    font-size: 2rem;
+    width: 250px;
+  }
+}
+
+@media (min-width: 800px) {
+  .blog-grid .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .blog-hero h1 {
+    font-size: 5.5rem;
+  }
+  .blog-hero p {
+    font-size: 2rem;
+  }
+  .blog-grid .grid-container {
+    gap: 1.25rem;
+  }
 }
 
 /* WINTER PAGE */

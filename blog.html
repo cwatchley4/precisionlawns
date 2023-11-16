@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Precision Lawns | Services</title>
+    <title>Precision Lawns | Blog</title>
     <meta property="og:title" content="Precision Lawns | Services" />
     <meta
       property="og:image"
@@ -57,11 +57,6 @@
     </script>
   </head>
   <body>
-    <!-- JOBBER BUTTON CODE
-    <button name="button" type="button" id="work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153">Book Online</button>
-        <link rel="stylesheet" media="screen" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css"/>
-        <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_dialog_snippet.js" clienthub_id="f9856854-13f6-4580-95ae-9ae7b3983153" form_url="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/public/work_request/embedded_dialog_work_request_form"></script>
-COPY IF NEEDED-->
     <header class="header">
       <nav class="navbar">
         <div class="logo">
@@ -90,26 +85,15 @@ COPY IF NEEDED-->
       </div>
     </header>
 
-    <script>
-      const toggleBtn = document.querySelector(".toggle-btn");
-      const toggleBtnIcon = document.querySelector(".toggle-btn i");
-      const dropDownMenu = document.querySelector(".dropdown-menu");
-
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle("open");
-        const isOpen = dropDownMenu.classList.contains("open");
-
-        toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      };
-    </script>
-
     <!-- HERO SECTION-->
 
-    <section class="services-hero">
+    <section class="blog-hero">
       <h1>Blog</h1>
-      <p>Great tools to create an awesome lawn.</p>
+      <p>
+        Great tools to create an <br />
+        awesome lawn.
+      </p>
+      <a href="#newsletter" class="button">Join Our Newsletter</a>
     </section>
 
     <!-- SEARCH SECTION-->
@@ -133,7 +117,7 @@ COPY IF NEEDED-->
 
     <section class="blog-grid">
       <div class="grid-container">
-        <a href="#" class="blog-post">
+        <a href="where-to.html" class="blog-post">
           <div
             class="image"
             style="background-image: url(photos/stripes1.jpeg)"
@@ -176,7 +160,7 @@ COPY IF NEEDED-->
 
     <!-- SUBSCRIBE SECTION -->
 
-    <section class="blog-subscribe">
+    <section class="blog-subscribe" id="newsletter">
       <div class="container">
         <div class="text">
           <h2>Welcome to Our Blog</h2>
@@ -235,5 +219,6 @@ COPY IF NEEDED-->
         >.
       </p>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
