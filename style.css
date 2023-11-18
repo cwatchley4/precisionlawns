@@ -1819,6 +1819,10 @@ footer .copyright a:hover {
   font-size: 0.7rem;
 }
 
+.clear-btn {
+  font-size: 0.7rem;
+}
+
 /* BLOG GRID SECTION */
 
 .blog-grid {
@@ -1937,7 +1941,8 @@ footer .copyright a:hover {
   .blog-hero p br {
     display: none;
   }
-  .sort-btn-container button {
+  .sort-btn-container button,
+  .clear-btn {
     font-size: 1rem;
   }
   .search-form i {

@@ -62,3 +62,7 @@ main p {
 main p:last-child {
   margin-bottom: 0;
 }
+
+main h2 {
+  margin-bottom: 2rem;
+}
