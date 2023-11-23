@@ -537,12 +537,25 @@ input[type="search"]::-webkit-search-results-decoration {
   z-index: 1;
 }
 
-.hero h1 {
-  font-size: 5.5vw;
+.hero .lg-text {
   margin: 1rem 1rem 4rem;
+  z-index: 1;
+}
+
+.hero h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
-  z-index: 1;
+  line-height: 90%;
+  font-size: 5vw;
+}
+
+.hero h1:first-child {
+  margin-bottom: 1rem;
+  font-size: 5.5vw;
+}
+
+.hero h1 br {
+  display: none;
 }
 
 .underline1 {
@@ -616,24 +629,43 @@ input[type="search"]::-webkit-search-results-decoration {
 /* RESPONSIVE HERO */
 
 @media (max-width: 950px) {
-  .hero h1 {
+  .hero .lg-text {
     margin-bottom: 3rem;
   }
 }
 
-@media (max-width: 590px) {
-  .hero h1 {
+@media (max-width: 700px) {
+  .hero .lg-text {
     margin-bottom: 2rem;
     line-height: 140%;
   }
+  .hero h1:first-child {
+    font-size: 9.5vw;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 6.5vw;
+  }
+  .hero h1 br {
+    display: inline;
+  }
   .hero li {
     padding: 0.7rem;
+  }
+  .hero li:first-child {
+    margin-bottom: 0.2rem;
+  }
+  .hero a {
+    font-size: 3.5vw;
   }
 }
 
 @media (max-width: 450px) {
   .hero h1 {
     margin-bottom: 1rem;
+  }
+  .hero .lg-text {
+    margin-bottom: 0.8rem;
   }
 }
 
