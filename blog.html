@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Precision Lawns | Services</title>
+    <title>Precision Lawns | Blog</title>
     <meta property="og:title" content="Precision Lawns | Services" />
     <meta
       property="og:image"
@@ -57,11 +57,6 @@
     </script>
   </head>
   <body>
-    <!-- JOBBER BUTTON CODE
-    <button name="button" type="button" id="work-request-button-f9856854-13f6-4580-95ae-9ae7b3983153">Book Online</button>
-        <link rel="stylesheet" media="screen" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css"/>
-        <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_dialog_snippet.js" clienthub_id="f9856854-13f6-4580-95ae-9ae7b3983153" form_url="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/public/work_request/embedded_dialog_work_request_form"></script>
-COPY IF NEEDED-->
     <header class="header">
       <nav class="navbar">
         <div class="logo">
@@ -90,115 +85,107 @@ COPY IF NEEDED-->
       </div>
     </header>
 
-    <script>
-      const toggleBtn = document.querySelector(".toggle-btn");
-      const toggleBtnIcon = document.querySelector(".toggle-btn i");
-      const dropDownMenu = document.querySelector(".dropdown-menu");
-
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle("open");
-        const isOpen = dropDownMenu.classList.contains("open");
-
-        toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      };
-    </script>
-
     <!-- HERO SECTION-->
 
-    <section class="services-hero">
-      <h1>What we <span class="actionword">do</span></h1>
-      <p>Transform your lawn</p>
+    <section class="blog-hero">
+      <h1>Blog</h1>
+      <p>
+        Great tools to create an <br />
+        awesome lawn.
+      </p>
+      <a href="#newsletter" class="button">Join Our Newsletter</a>
     </section>
 
-    <!-- MOW TRIM CLEAN-UP SECTION -->
+    <!-- SEARCH SECTION-->
 
-    <section class="mowtrimcleanup">
-      <div class="container">
-        <div class="text">
-          <h2>Mow.<br />Trim.<br />Clean up.</h2>
-          <p>
-            It doesn't matter if we're doing weekly maintenance or a complete
-            lawn reconstruction, every lawn is treated as if it was our own.
-          </p>
-        </div>
-        <img src="photos/ventrac.jpg" alt="" />
+    <section class="blog-search">
+      <div class="search-form">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <form action="">
+          <input type="search" placeholder="Search Blog" />
+        </form>
+      </div>
+      <div class="sort-btn-container">
+        <button class="button">
+          <i class="fa-solid fa-up-down"></i>
+          <span>Sort by Newest</span>
+        </button>
+      </div>
+      <button class="clear-btn button hidden">Clear Search</button>
+    </section>
+
+    <!-- BLOG POSTS GRID SECTION -->
+
+    <section class="blog-grid">
+      <div class="grid-container">
+        <a
+          href="where-to.html"
+          class="blog-post"
+          date="2023-11-16"
+          search-terms="history, starting a business, story, family"
+        >
+          <div
+            class="image"
+            style="background-image: url(photos/stripes1.jpeg)"
+          ></div>
+          <h3 class="blog-title">
+            From Where, Where Now, and Where Are We Going?
+          </h3>
+          <div class="overlay"></div>
+        </a>
+        <a
+          href="#"
+          class="blog-post"
+          date="2023-12-16"
+          search-terms="how to, seed, lawn, green, new grass, fix, guide"
+        >
+          <div
+            class="image"
+            style="background-image: url(photos/stripes3.jpeg)"
+          ></div>
+          <h3 class="blog-title">The Ultimate Guide to a Lush Green Lawn</h3>
+          <div class="overlay"></div>
+        </a>
+        <a href="#" class="blog-post" search-terms="" date="2024-01-16">
+          <div
+            class="image"
+            style="background-image: url(photos/old-house.jpg)"
+          ></div>
+          <h3 class="blog-title">
+            Fertilizer Fundamentals: Feeding Your Lawn for Optimal Growth
+          </h3>
+          <div class="overlay"></div>
+        </a>
+        <a href="#" class="blog-post" search-terms="" date="2024-02-16">
+          <div
+            class="image"
+            style="background-image: url(photos/ventrac.jpg)"
+          ></div>
+          <h3 class="blog-title">
+            The Green Thumb's Toolbox: Must-Have Lawn Care Equipment
+          </h3>
+          <div class="overlay"></div>
+        </a>
       </div>
     </section>
 
-    <!-- KEY SERVICES SECTION -->
+    <!-- SUBSCRIBE SECTION -->
 
-    <section class="key-services">
-      <section>
-        <header>
-          <h2>
-            <span class="actionword">Key Services</span> We Always Provide
-          </h2>
-        </header>
-      </section>
-      <section class="cards-container">
-        <section class="cards">
-          <div class="card">
-            <h3>Mowing</h3>
-            <p>
-              We always consider the specific and individual needs of your lawn.
-              This will effect many aspects of the services we provide.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Trimming</h3>
-            <p>
-              We always including trimming with regular lawn maintenance. We
-              believe straight lines can really improve curb appeal.
-            </p>
-          </div>
-          <div class="card">
-            <h3>CLEAN-UP</h3>
-            <p>
-              We always picking up sticks and blow glass trimmings. Don't worry,
-              there won't be grass piles in your driveway or on your street.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Reliable</h3>
-            <p>
-              When you hire us for your lawn care needs, you can expect
-              consistently great results. We're too OCD to be unreliable.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Personal</h3>
-            <p>
-              We live and work in small towns, so we know how valuable a
-              personal touch is in any type of business. We promise to provide
-              that.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Knowlegable</h3>
-            <p>
-              We have a good understanding of the different types of grasses and
-              the proper techniques for maintaining them.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Affordable</h3>
-            <p>
-              We know living is expensive. That's why we offer competitive
-              pricing without sacrificing on quality.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Experienced</h3>
-            <p>
-              Although we're a relatively new lawn care company, we have been
-              striping our lawns at home for years. We know what it takes.
-            </p>
-          </div>
-        </section>
-      </section>
-      <a href="book" class="button">Book a Free Assesment</a>
+    <section class="blog-subscribe" id="newsletter">
+      <div class="container">
+        <div class="text">
+          <h2>Welcome to Our Blog</h2>
+          <p>
+            Enter your email below to subscribe to our monthly newsletter.
+            Everytime we post new lawn maintance tips and tricks, you'll get an
+            email with a link to the blog post.
+          </p>
+        </div>
+        <form action="#">
+          <input type="text" name="email" placeholder="Type Your Email Here" />
+        </form>
+        <button class="button">Join our Newsletter</button>
+      </div>
     </section>
 
     <!-- FOOTER SECTION -->
@@ -243,5 +230,6 @@ COPY IF NEEDED-->
         >.
       </p>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
