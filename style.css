@@ -10,6 +10,7 @@
 body {
   font-family: Montserrat;
   background-color: white;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* clears the ‘X’ in search input from Internet Explorer */
@@ -207,13 +208,18 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .header {
   position: relative;
+  z-index: 2;
   padding: 0 2rem;
   background-color: white;
+  /* background: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  ); */
 }
 
 .navbar {
   width: 100%;
-  height: 80px;
+  height: 70px;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -502,14 +508,14 @@ input[type="search"]::-webkit-search-results-decoration {
 /* HERO SECTION */
 
 .hero {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  /* background-color: rgba(0, 0, 0, .5); */
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .hero #bgvideo {
@@ -525,16 +531,56 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 3vw;
   padding: 0 3rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  padding: 1rem 3rem;
+  font-size: 5.5vw;
+  margin: 1rem 1rem 4rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
+  z-index: 1;
+}
+
+.underline1 {
+  position: relative;
+}
+
+.underline1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(backgrounds/underline-2.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  background-position: center;
+  left: 0;
+  bottom: 0;
+  transform: translateY(35%);
+  z-index: -1;
+}
+
+.underline2 {
+  position: relative;
+}
+
+.underline2::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(backgrounds/underline.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  background-position: center;
+  left: 0;
+  bottom: 0;
+  transform: translateY(35%);
+  z-index: -1;
 }
 
 .hero ul {
@@ -553,7 +599,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border: none;
   outline: none;
   border-radius: 15px;
-  font-size: 1.5rem;
+  font-size: 2.5vw;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
@@ -569,25 +615,25 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* RESPONSIVE HERO */
 
+@media (max-width: 950px) {
+  .hero h1 {
+    margin-bottom: 3rem;
+  }
+}
+
 @media (max-width: 590px) {
   .hero h1 {
-    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 140%;
   }
-  .hero p {
-    font-size: 1.25rem;
+  .hero li {
+    padding: 0.7rem;
   }
 }
 
 @media (max-width: 450px) {
   .hero h1 {
-    font-size: 2rem;
-    padding: 1rem 3rem;
-  }
-  .hero p {
-    font-size: 1.25rem;
-  }
-  .hero li a {
-    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -709,7 +755,8 @@ input[type="search"]::-webkit-search-results-decoration {
   background-image: url(photos/stripes3.jpeg);
   background-position: center;
   background-size: cover;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
+  z-index: -2;
 }
 
 .transition h2 {
@@ -720,6 +767,12 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0 2rem;
   text-align: center;
   color: white;
+}
+
+@media (max-width: 800px) {
+  .transition {
+    background-attachment: scroll;
+  }
 }
 
 /* GETTING STARTED SECTION */
@@ -803,7 +856,7 @@ input[type="search"]::-webkit-search-results-decoration {
 /* REVIEWS SECTION */
 
 .reviews {
-  padding: 3rem 4rem 0;
+  padding: 3rem 4rem;
   background-color: #f0f0f0;
 }
 
@@ -825,7 +878,7 @@ input[type="search"]::-webkit-search-results-decoration {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0rem 2rem 4rem;
+  padding: 3rem 4rem;
 }
 
 .contact header {
