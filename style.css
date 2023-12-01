@@ -1372,7 +1372,7 @@ footer .copyright a:hover {
 .mowtrimcleanup {
   width: 100%;
   height: auto;
-  background-image: url(backgrounds/stripes-bg-green.jpg);
+  background-image: url(backgrounds/stripes-bg-green.webp);
   display: flex;
   align-items: center;
 }
@@ -2087,7 +2087,7 @@ footer .copyright a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(backgrounds/snow.jpeg);
+  background-image: url(backgrounds/snow.webp);
   background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: darken;
   background-size: cover;
