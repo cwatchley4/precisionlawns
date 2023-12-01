@@ -784,7 +784,7 @@ input[type="search"]::-webkit-search-results-decoration {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(photos/stripes3.jpeg);
+  background-image: url(photos/stripes3.webp);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -1297,7 +1297,7 @@ footer .copyright a:hover {
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
-  background-image: url(photos/stripes2.jpeg);
+  background-image: url(photos/stripes2.webp);
   background-size: cover;
   background-position: center;
   background-blend-mode: darken;
@@ -1567,7 +1567,7 @@ footer .copyright a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(photos/stripes1.jpeg);
+  background-image: url(photos/stripes1.webp);
   background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: darken;
   background-size: cover;
@@ -1863,7 +1863,7 @@ footer .copyright a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(photos/stripes1.jpeg);
+  background-image: url(photos/stripes1.webp);
   background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: darken;
   background-size: cover;
