@@ -1,0 +1,5 @@
+user-agent: *
+Disallow:
+
+Sitemap: https://precisionlawns309.com/sitemap.xml
+
