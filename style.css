@@ -207,14 +207,12 @@ input[type="search"]::-webkit-search-results-decoration {
 /* Header Below */
 
 .header {
-  position: relative;
+  position: fixed;
   z-index: 2;
   padding: 0 2rem;
+  width: 100%;
   background-color: white;
-  /* background: linear-gradient(
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.3)
-  ); */
+  box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
@@ -508,7 +506,7 @@ input[type="search"]::-webkit-search-results-decoration {
 /* HERO SECTION */
 
 .hero {
-  height: calc(100vh - 70px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -516,6 +514,7 @@ input[type="search"]::-webkit-search-results-decoration {
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.25);
+  padding-top: 70px;
 }
 
 .hero #bgvideo {
