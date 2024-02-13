@@ -143,6 +143,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 10;
 }
 
 .modal p {
@@ -186,6 +187,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 2rem;
   cursor: pointer;
   color: white;
+  z-index: 11;
 }
 
 .hidden {
