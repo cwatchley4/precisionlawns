@@ -225,6 +225,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .announcements .links {
   display: flex;
+  width: 100%;
   justify-content: space-around;
 }
 
@@ -1409,9 +1410,15 @@ footer .copyright a:hover {
 
 /* RESPONSIVE SERVICES HERO */
 
+@media (max-width: 965px) {
+  .services-hero h1 {
+    font-size: 4rem;
+  }
+}
+
 @media (max-width: 428px) {
   .services-hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   .services-hero p {
     font-size: 1.25rem;
@@ -1422,23 +1429,25 @@ footer .copyright a:hover {
 
 .mowtrimcleanup {
   width: 100%;
-  height: auto;
   background-image: url(backgrounds/stripes-bg-green.webp);
-  display: flex;
-  align-items: center;
 }
 
 .mowtrimcleanup .container {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 1100px;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem;
+  margin: auto;
 }
 
 .mowtrimcleanup .container .text {
-  width: 50%;
-  margin: 3rem 1.5rem 3rem 5rem;
+  max-width: 100%;
   color: white;
+  display: flex;
+  flex-direction: column;
+  place-self: center;
 }
 
 .mowtrimcleanup .container .text h2 {
@@ -1451,11 +1460,15 @@ footer .copyright a:hover {
 .mowtrimcleanup .container .text p {
   font-size: 1rem;
   line-height: 1.75rem;
+  max-width: 400px;
+  flex-basis: 50%;
 }
 
-.mowtrimcleanup .container img {
-  width: 50%;
-  margin: 3rem 5rem 3rem 1.5rem;
+.mowtrimcleanup .swiper {
+  max-width: 500px;
+}
+
+.mowtrimcleanup .swiper-slide {
   border-radius: 15px;
   object-fit: cover;
 }
@@ -1464,51 +1477,33 @@ footer .copyright a:hover {
 
 @media (max-width: 965px) {
   .mowtrimcleanup .container {
-    flex-direction: column;
-  }
-  .mowtrimcleanup .container img {
-    margin: 1.5rem 1rem 3rem;
-    width: 80%;
-  }
-  .mowtrimcleanup .container .text {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    margin: 3rem 1rem 1.5rem;
-  }
-
-  .mowtrimcleanup .container .text p {
-    width: 50%;
-    align-self: center;
-    margin-left: 1rem;
-  }
-
-  .mowtrimcleanup .container .text h2 {
-    width: 50%;
-    align-self: center;
-    margin: 0 1rem 0 0;
-    font-size: 3rem;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    place-content: center;
+    gap: 1rem;
+    text-align: center;
   }
 }
 
-@media (max-width: 714px) {
-  .mowtrimcleanup .container .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin: 1.5rem 1rem 1rem;
+@media (max-width: 685px) {
+  .mowtrimcleanup .swiper {
+    max-width: 300px;
   }
-  .mowtrimcleanup .container .text p {
-    width: 80%;
-    align-self: center;
-    margin: 0;
+  .mowtrimcleanup .container {
+    gap: 2rem;
   }
   .mowtrimcleanup .container .text h2 {
-    width: 80%;
-    align-self: center;
-    font-size: 3rem;
-    margin: 0 0 1rem 0;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 405px) {
+  .mowtrimcleanup .swiper {
+    max-width: 225px;
+  }
+  .mowtrimcleanup .container .text h2 {
+    font-size: 2rem;
   }
 }
 
@@ -1595,6 +1590,9 @@ footer .copyright a:hover {
   .cards {
     grid-template-columns: repeat(1, minmax(250px, 300px));
     gap: 2rem;
+  }
+  .key-services header h2 {
+    font-size: 2rem;
   }
 }
 

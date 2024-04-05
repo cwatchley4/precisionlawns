@@ -25,6 +25,11 @@ toggleBtn.addEventListener("click", function () {
 //   changeDropDownMenuIcon();
 // });
 
+// Swiper
+// const swiper = new Swiper(".mySwiper", {
+//   effect: "cards",
+//   grabCursor: true,
+// });
 // Modal
 
 const closeModalButton = document.querySelector(".close-modal");

@@ -41,6 +41,11 @@
       src="//code.tidio.co/sixvgwmragqepba7kxljenid0ulocqix.js"
       async
     ></script>
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -132,7 +137,13 @@
             lawn reconstruction, every lawn is treated as if it was our own.
           </p>
         </div>
-        <img src="photos/ventrac.webp" alt="" />
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <img class="swiper-slide" src="photos/ventrac.webp" alt="" />
+            <img class="swiper-slide" src="photos/stripes2.webp" alt="" />
+            <img class="swiper-slide" src="photos/stripes3.webp" alt="" />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -165,7 +176,7 @@
           <div class="card">
             <h3>CLEAN-UP</h3>
             <p>
-              We always picking up sticks and blow glass trimmings. Don't worry,
+              We always pick up sticks and blow glass trimmings. Don't worry,
               there won't be grass piles in your driveway or on your street.
             </p>
           </div>
@@ -253,4 +264,11 @@
       </p>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      effect: "cards",
+      grabCursor: true,
+    });
+  </script>
 </html>
