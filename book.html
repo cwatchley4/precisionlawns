@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://precisionlawns309.com" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="logos/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" sizes="any" href="logos/Icon.svg" />
     <link rel="apple-touch-icon" href="logos/apple-touch-icon.png" />
@@ -52,59 +52,60 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-Y22RPT6MQG");
     </script>
   </head>
   <body>
     <!--NAV SECTION BELOW-->
-
-    <header class="header2">
-      <nav class="announcements">
-        <div class="links">
-          <a href="https://precisionlawns309.com/book"
-            ><i class="fa-solid fa-calendar-days"></i
-            ><span>Book Online</span></a
+    <header class="header">
+      <nav class="header__announcements">
+        <div class="header__links">
+          <a class="header__link" href="https://precisionlawns309.com/book">
+            <i class="fa-solid fa-calendar-days"></i><span>Book Online</span>
+          </a>
+          <a
+            class="header__link"
+            href="https://facebook.com/precisionlawns309"
+            target="_blank"
           >
-          <a href="https://facebook.com/precisionlawns309" target="_blank"
-            ><i class="fa-brands fa-facebook"></i><span>Facebook</span></a
-          >
-          <a href="tel:3092147277" target="_blank"
-            ><i class="fa-solid fa-phone"></i><span>(309) 214-7277</span></a
-          >
+            <i class="fa-brands fa-facebook"></i><span>Facebook</span>
+          </a>
+          <a class="header__link" href="tel:3092147277" target="_blank">
+            <i class="fa-solid fa-phone"></i><span>(309) 214-7277</span>
+          </a>
         </div>
       </nav>
       <nav class="navbar">
-        <div class="logo">
+        <div class="navbar__logo">
           <a href="/"
             ><img src="logos/Icon.svg" alt="Precision Lawns logo"
           /></a>
-          <a href="/">Precision Lawns</a>
+          <a class="navbar__brand" href="/">Precision Lawns</a>
         </div>
-        <ul class="links">
-          <li><a href="/">Home</a></li>
-          <li><a href="about">About</a></li>
-          <li><a href="services">Services</a></li>
-          <li><a href="winter">Winter</a></li>
-          <li><a href="book">Book Online</a></li>
+        <ul class="navbar__links">
+          <li><a class="navbar__link" href="/">Home</a></li>
+          <li><a class="navbar__link" href="about">About</a></li>
+          <li><a class="navbar__link" href="services">Services</a></li>
+          <li><a class="navbar__link" href="winter">Winter</a></li>
+          <li><a class="navbar__link" href="book">Book Online</a></li>
         </ul>
-        <div class="toggle-btn">
+        <div class="navbar__toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
-      <div class="dropdown-menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="services">Services</a></li>
-        <li><a href="winter">Winter</a></li>
-        <li><a href="book">Book Online</a></li>
+      <div class="navbar__dropdown">
+        <li><a class="navbar__dropdown-link" href="/">Home</a></li>
+        <li><a class="navbar__dropdown-link" href="about">About</a></li>
+        <li><a class="navbar__dropdown-link" href="services">Services</a></li>
+        <li><a class="navbar__dropdown-link" href="winter">Winter</a></li>
+        <li><a class="navbar__dropdown-link" href="book">Book Online</a></li>
       </div>
     </header>
 
     <script>
-      const toggleBtn = document.querySelector(".toggle-btn");
-      const toggleBtnIcon = document.querySelector(".toggle-btn i");
-      const dropDownMenu = document.querySelector(".dropdown-menu");
+      const toggleBtn = document.querySelector(".navbar__toggle");
+      const toggleBtnIcon = document.querySelector(".navbar__toggle i");
+      const dropDownMenu = document.querySelector(".navbar__dropdown");
 
       toggleBtn.onclick = function () {
         dropDownMenu.classList.toggle("open");
@@ -117,13 +118,14 @@
     </script>
 
     <!-- REQUEST SECTION -->
-
     <main class="request">
-      <header>
-        <h2>Request a Free Assessment Here</h2>
-        <p>Fill this out and we'll be in touch with you.</p>
+      <header class="request__header">
+        <h2 class="request__title">Request a Free Assessment Here</h2>
+        <p class="request__subtitle">
+          Fill this out and we'll be in touch with you.
+        </p>
       </header>
-      <section>
+      <section class="request__section">
         <div>
           <div id="f9856854-13f6-4580-95ae-9ae7b3983153"></div>
           <link
@@ -141,17 +143,18 @@
     </main>
 
     <!-- FOOTER SECTION -->
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
-            <h4>Precision Lawns</h4>
-            <hr />
-            <ul>
-              <li>PO Box 714, Canton IL 61520</li>
-              <li><a href="tel: 3092147277">(309) 214-7277</a></li>
-              <li>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__row">
+          <div class="footer__col">
+            <h4 class="footer__title">Precision Lawns</h4>
+            <hr class="footer__separator" />
+            <ul class="footer__list">
+              <li class="footer__item">PO Box 714, Canton IL 61520</li>
+              <li class="footer__item">
+                <a href="tel: 3092147277">(309) 214-7277</a>
+              </li>
+              <li class="footer__item">
                 <a
                   href="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/login/new?source=share_login"
                   target="_blank"
@@ -160,23 +163,29 @@
               </li>
             </ul>
           </div>
-          <div class="footer-col">
-            <h4>Social</h4>
-            <hr />
-            <div class="social-links">
+          <div class="footer__col">
+            <h4 class="footer__title">Social</h4>
+            <hr class="footer__separator" />
+            <div class="footer__social-links">
               <a
+                class="footer__social-link"
                 href="https://www.facebook.com/precisionlawns309"
                 target="_blank"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-              <a href="https://linktr.ee/precisionlawns309" target="_blank"
-                ><i class="fa-solid fa-link"></i
-              ></a>
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a
+                class="footer__social-link"
+                href="https://linktr.ee/precisionlawns309"
+                target="_blank"
+              >
+                <i class="fa-solid fa-link"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <p class="copyright">
+      <p class="footer__copyright">
         © Copyright 2023. Made by
         <a href="https://curtisatchley.com"><b>Curtis Atchley</b></a
         >.
