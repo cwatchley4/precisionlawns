@@ -1,11 +1,16 @@
 "use strict";
 
-// Responsive Nav Bar
+const toggleBtn = document.querySelector(".navbar__toggle");
+const toggleBtnIcon = document.querySelector(".navbar__toggle i");
+const dropDownMenu = document.querySelector(".navbar__dropdown");
+const closeModalButton = document.querySelector(".modal__close");
+const modal = document.querySelector(".modal");
+const modalOverlay = document.querySelector(".modal-overlay");
+const servicesButtonsContainer = document.querySelector(".services__list");
+const servicesButton = document.querySelectorAll(".services__list .button");
+const servicesDescription = document.querySelectorAll(".services__description");
 
-const toggleBtn = document.querySelector(".toggle-btn");
-const toggleBtnIcon = document.querySelector(".toggle-btn i");
-const dropDownMenu = document.querySelector(".dropdown-menu");
-
+// Navbar Button
 const changeDropDownMenuIcon = function () {
   const isOpen = dropDownMenu.classList.contains("open");
   toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
@@ -20,67 +25,63 @@ toggleBtn.addEventListener("click", function () {
   changeDropDownMenuIcon();
 });
 
-// document.querySelector("main").addEventListener("click", function () {
-//   dropDownMenu.classList.remove("open");
-//   changeDropDownMenuIcon();
-// });
-
-// Swiper
-// const swiper = new Swiper(".mySwiper", {
-//   effect: "cards",
-//   grabCursor: true,
-// });
 // Modal
+const year = 2024;
+const month = 9;
+const day = 1;
+const startDate = new Date(year, month, day);
 
-const closeModalButton = document.querySelector(".close-modal");
-const modal = document.querySelector(".modal");
-const modalOverlay = document.querySelector(".modal-overlay");
+if (new Date() >= startDate) {
+  const closeModal = function () {
+    modal.classList.add("hidden");
+    modalOverlay.classList.add("hidden");
+    document.querySelector("body").classList.remove("no-scroll");
+  };
 
-const closeModal = function () {
-  modal.classList.add("hidden");
-  modalOverlay.classList.add("hidden");
-  document.querySelector("body").classList.remove("no-scroll");
-};
+  const openModal = function () {
+    document.querySelector("body").classList.add("no-scroll");
+    modal.classList.remove("hidden");
+    modalOverlay.classList.remove("hidden");
+    const expirationTime = 60 * 60 * 1000;
+    const currentTime = new Date().getTime();
+    localStorage.setItem(
+      "viewedModal",
+      JSON.stringify({ value: "true", expiry: currentTime + expirationTime })
+    );
+  };
 
-console.log(sessionStorage);
+  document.addEventListener("DOMContentLoaded", function () {
+    const viewedModal = JSON.parse(localStorage.getItem("viewedModal"));
+    if (!viewedModal || viewedModal.expiry < new Date().getTime()) {
+      openModal();
+    }
+  });
 
-const openModal = function () {
-  document.querySelector("body").classList.add("no-scroll");
-  modal.classList.remove("hidden");
-  modalOverlay.classList.remove("hidden");
-  const expirationTime = 60 * 60 * 1000; // 1 hour in milliseconds
-  const currentTime = new Date().getTime();
-  localStorage.setItem(
-    "viewedModal",
-    JSON.stringify({ value: "true", expiry: currentTime + expirationTime })
-  );
-};
+  closeModalButton.addEventListener("click", function () {
+    if (!modal.classList.contains("hidden")) closeModal();
+  });
+  document.querySelector("body").addEventListener("click", function () {
+    if (!modal.classList.contains("hidden")) closeModal();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+  });
+}
 
-// DOM loads the modal
+// Services
+servicesButtonsContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".button");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const viewedModal = JSON.parse(localStorage.getItem("viewedModal"));
-  if (!viewedModal || viewedModal.expiry < new Date().getTime()) {
-    openModal();
-  }
+  servicesButton.forEach((b) => b.classList.remove("service--active"));
+  clicked.classList.add("service--active");
+
+  servicesDescription.forEach((d) => d.classList.add("hidden"));
+  document
+    .querySelector(`.services__description--${clicked.dataset.tab}`)
+    .classList.remove("hidden");
 });
 
-// Close button, click body, and escape key closes the modal
-
-closeModalButton.addEventListener("click", function () {
-  if (!modal.classList.contains("hidden")) closeModal();
-  console.log("clicked");
-});
-document.querySelector("body").addEventListener("click", function () {
-  if (!modal.classList.contains("hidden")) closeModal();
-});
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
-});
-
-// BLOG PAGE
-
+// Blog
 if (document.querySelector("[page='blog']")) {
   document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.querySelector(".search-form input");
@@ -88,7 +89,6 @@ if (document.querySelector("[page='blog']")) {
     const clearButton = document.querySelector(".clear-btn");
     const blogPostsContainer = document.querySelector(".grid-container");
 
-    // Extract and split search terms from data attribute
     const extractSearchTerms = (post) => {
       const dataAttribute = post.getAttribute("search-terms");
       return dataAttribute
@@ -99,49 +99,41 @@ if (document.querySelector("[page='blog']")) {
         : [];
     };
 
-    // Function to compare blog post dates for sorting
     const compareDates = (a, b) => {
       const dateA = new Date(a.getAttribute("date"));
       const dateB = new Date(b.getAttribute("date"));
-
       return dateB - dateA;
     };
 
-    // Initial sorting by newest first
     let originalBlogPosts = [...blogPostsContainer.children];
     blogPostsContainer.innerHTML = originalBlogPosts
       .sort(compareDates)
       .map((post) => post.outerHTML)
       .join("");
 
-    // Add click event to the sort button
     sortButtonContainer.addEventListener("click", function () {
       const isSortedByNewest =
         sortButtonContainer.querySelector("span").textContent ===
         "Sort by Newest";
 
-      // Toggle between sorting by newest and sorting by oldest
       const sortedPosts = originalBlogPosts
         .slice()
         .sort(isSortedByNewest ? compareDates : (a, b) => -compareDates(a, b));
 
-      // Update the blog posts container with the sorted posts
       blogPostsContainer.innerHTML = sortedPosts
         .map((post) => post.outerHTML)
         .join("");
 
-      // Change the text of the sort button
       sortButtonContainer.querySelector("span").textContent = isSortedByNewest
         ? "Sort by Oldest"
         : "Sort by Newest";
 
-      // Hide the clear button
       clearButton.classList.add("hidden");
     });
 
     searchInput.addEventListener("input", function () {
-      const searchInputTrimmed = searchInput.value.toLowerCase().trim(); // Trim spaces
-      const searchInputWords = searchInputTrimmed.split(/\s+/); // Split by whitespace
+      const searchInputTrimmed = searchInput.value.toLowerCase().trim();
+      const searchInputWords = searchInputTrimmed.split(/\s+/);
 
       blogPostsContainer.innerHTML = originalBlogPosts
         .map((post) => post.outerHTML)
@@ -152,9 +144,8 @@ if (document.querySelector("[page='blog']")) {
         const title = post
           .querySelector(".blog-title")
           .textContent.toLowerCase()
-          .trim(); // Trim spaces
+          .trim();
 
-        // Check if any word of the search input matches any search term or the title
         const matches = searchInputWords.some(
           (word) =>
             searchTerms.some((term) => term.includes(word)) ||
@@ -166,23 +157,19 @@ if (document.querySelector("[page='blog']")) {
         }
       });
 
-      // Show the clear button
       clearButton.classList.remove("hidden");
       sortButtonContainer.classList.add("hidden");
     });
 
-    // Add click event to clear the search input
     clearButton.addEventListener("click", function () {
-      searchInput.value = ""; // Clear the search input
-      clearButton.classList.add("hidden"); // Hide the clear button
+      searchInput.value = "";
+      clearButton.classList.add("hidden");
       sortButtonContainer.classList.remove("hidden");
 
-      // Show all blog posts
       blogPostsContainer.innerHTML = originalBlogPosts
         .map((post) => post.outerHTML)
         .join("");
 
-      // Change the text of the sort button to "Sort by Newest"
       sortButtonContainer.querySelector("span").textContent = "Sort by Newest";
     });
   });
