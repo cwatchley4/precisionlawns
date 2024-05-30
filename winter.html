@@ -1,167 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Precision Lawns | Snow Removal & Holiday Lighting</title>
-    <meta property="og:title" content="Precision Lawns | Snow Removal & Holiday Lighting">
-    <meta property="og:image" content="https://i.ibb.co/VQp4dRS/social-share.png">
-    <meta property="og:description" content="Book your winter services here including: snow removal, salting, and holiday lighting. ">
-    <meta property="og:url" content="https://precisionlawns309.com">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logos/favicon.ico" sizes="48x48">
-    <link rel="icon" type="image/svg+xml" sizes="any" href="logos/Icon.svg">
-    <link rel="apple-touch-icon" href="logos/apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/efq7til.css">
-    <script src="https://kit.fontawesome.com/bc134222d9.js" crossorigin="anonymous"></script>
-    <!-- JOBBER CODE BELOW -->
-    <link rel="stylesheet" media="screen" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css">
-    <!-- JOBBER CODE ABOVE -->
-    <!-- TIDIO CODE BELOW -->
-    <script src="//code.tidio.co/sixvgwmragqepba7kxljenid0ulocqix.js" async></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y22RPT6MQG"></script>
+    <meta
+      property="og:title"
+      content="Precision Lawns | Snow Removal & Holiday Lighting"
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/VQp4dRS/social-share.png"
+    />
+    <meta
+      property="og:description"
+      content="Book your winter services here including: snow removal, salting, and holiday lighting."
+    />
+    <meta property="og:url" content="https://precisionlawns309.com" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logos/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="logos/Icon.svg" />
+    <link rel="apple-touch-icon" href="logos/apple-touch-icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/efq7til.css" />
+    <script
+      src="https://kit.fontawesome.com/bc134222d9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y22RPT6MQG"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-Y22RPT6MQG');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y22RPT6MQG");
     </script>
-</head>
-<body>
-    <header class="header header--winter">
-        <nav class="header__announcements">
-            <div class="header__links">
-                <a class="header__link" href="https://precisionlawns309.com/book">
-                    <i class="fa-solid fa-calendar-days"></i><span>Book Online</span>
-                </a>
-                <a class="header__link" href="https://facebook.com/precisionlawns309" target="_blank">
-                    <i class="fa-brands fa-facebook"></i><span>Facebook</span>
-                </a>
-                <a class="header__link" href="tel:3092147277" target="_blank">
-                    <i class="fa-solid fa-phone"></i><span>(309) 214-7277</span>
-                </a>
-            </div>
-        </nav>
-        <nav class="navbar">
-            <div class="navbar__logo">
-                <a href="/"><img src="logos/icon-winter.svg" alt="Precision Lawns logo"></a>
-                <a class="navbar__brand" href="/">Precision Lawns</a>
-            </div>
-            <ul class="navbar__links">
-                <li><a class="navbar__link" href="/">Home</a></li>
-                <li><a class="navbar__link" href="about">About</a></li>
-                <li><a class="navbar__link" href="services">Services</a></li>
-                <li><a class="navbar__link" href="winter">Winter</a></li>
-                <li><a class="navbar__link" href="book">Book Online</a></li>
-            </ul>
-            <div class="navbar__toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </nav>
-        <div class="navbar__dropdown">
-            <li><a class="navbar__dropdown-link" href="/">Home</a></li>
-            <li><a class="navbar__dropdown-link" href="about">About</a></li>
-            <li><a class="navbar__dropdown-link" href="services">Services</a></li>
-            <li><a class="navbar__dropdown-link" href="/winter.html">Winter</a></li>
-            <li><a class="navbar__dropdown-link" href="book">Book Online</a></li>
+  </head>
+  <body>
+    <div class="modal hidden">
+      <i class="modal__close fa-solid fa-xmark"></i>
+      <div class="modal__content">
+        <h2 class="modal__title">Spring is Coming...</h2>
+        <p class="modal__description">
+          Warmer weather is around the corner, which means it's almost time for
+          mowing season and spring clean ups. Let us take care of that for you.
+          To book a free assessment, click the button below.
+        </p>
+        <a class="button button--inverse" href="/book"
+          >Book a Free Assessment</a
+        >
+      </div>
+    </div>
+    <div class="modal-overlay hidden"></div>
+    <header class="header">
+      <nav class="header__announcements">
+        <div class="header__links">
+          <a href="https://precisionlawns309.com/book" class="header__link"
+            ><i class="fa-solid fa-calendar-days"></i
+            ><span>Book Online</span></a
+          >
+          <a
+            href="https://facebook.com/precisionlawns309"
+            target="_blank"
+            class="header__link"
+            ><i class="fa-brands fa-facebook"></i><span>Facebook</span></a
+          >
+          <a href="tel:3092147277" target="_blank" class="header__link"
+            ><i class="fa-solid fa-phone"></i><span>(309) 214-7277</span></a
+          >
         </div>
+      </nav>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="/"
+            ><img src="logos/Icon.svg" alt="Precision Lawns logo"
+          /></a>
+          <a class="navbar__brand" href="/">Precision Lawns</a>
+        </div>
+        <ul class="navbar__links">
+          <li><a class="navbar__link" href="/">Home</a></li>
+          <li><a class="navbar__link" href="about">About</a></li>
+          <li><a class="navbar__link" href="services">Services</a></li>
+          <li><a class="navbar__link" href="winter">Winter</a></li>
+          <li><a class="navbar__link" href="book">Book Online</a></li>
+        </ul>
+        <div class="navbar__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <div class="navbar__dropdown">
+        <li><a class="navbar__dropdown-link" href="/">Home</a></li>
+        <li><a class="navbar__dropdown-link" href="about">About</a></li>
+        <li><a class="navbar__dropdown-link" href="services">Services</a></li>
+        <li><a class="navbar__dropdown-link" href="winter">Winter</a></li>
+        <li><a class="navbar__dropdown-link" href="book">Book Online</a></li>
+      </div>
     </header>
 
     <main>
-        <section class="hero hero--winter">
-            <h1 class="hero__title">Winter <span class="highlight--winter">Services</span></h1>
-            <p class="hero__subtitle">Snow removal & holiday lighting</p>
-        </section>
+      <section class="winter-hero page-hero">
+        <h1>Winter <span class="highlight">Services</span></h1>
+        <p>Snow removal & holiday lighting</p>
+      </section>
 
-        <section class="snow-removal">
-            <header class="snow-removal__header">
-                <h2 class="snow-removal__title">Snow <span class="highlight--winter">Removal</span></h2>
-            </header>
-            <div class="snow-removal__container">
-                <div class="snow-removal__image">
-                    <img src="photos/plow.webp" alt="">
-                </div>
-                <div class="snow-removal__text-calc">
-                    <div class="snow-removal__text">
-                        <p>
-                            Precision Lawns offers snow removal in two ways: <b>plowing</b> and <b>salting</b>. Click the button below to book a free assessment and we will give you a quote for this coming winter.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <a class="button button--winter" href="book">Get a Quote</a>
-        </section>
+      <section class="snow-removal body-section--padding body-section--flex">
+        <header>
+          <h2>Snow <span class="highlight">Removal</span></h2>
+        </header>
+        <div class="container">
+          <div class="image">
+            <img src="photos/plow.webp" alt="Snow Plow" />
+          </div>
+          <div class="text">
+            <p>
+              Precision Lawns offers snow removal in two ways:
+              <b>plowing</b> and <b>salting</b>. Click the button below to book
+              a free assessment and we will give you a quote for this coming
+              winter.
+            </p>
+          </div>
+        </div>
+        <a href="book" class="button">Get a Quote</a>
+      </section>
 
-        <section class="holiday-lighting">
-            <header class="holiday-lighting__header">
-                <h2 class="holiday-lighting__title"><span class="highlight--winter">Holiday</span> Lighting</h2>
-            </header>
-            <div class="holiday-lighting__container">
-                <div class="holiday-lighting__image">
-                    <img src="photos/holiday-lights.webp" alt="">
-                </div>
-                <div class="holiday-lighting__text">
-                    <p>We will be offering both residential and commercial holiday lighting this year. Check this page for updates on this service.</p>
-                </div>
-            </div>
-        </section>
+      <section
+        class="holiday-lighting body-section--padding body-section--flex"
+      >
+        <header>
+          <h2><span class="highlight">Holiday</span> Lighting</h2>
+        </header>
+        <div class="container">
+          <div class="image">
+            <img src="photos/holiday-lights.webp" alt="Holiday Lights" />
+          </div>
+          <div class="text">
+            <p>
+              We will be offering both residential and commercial holiday
+              lighting this year. Check this page for updates on this service.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="contact contact--winter" id="contact-winter">
-            <header class="contact__header">
-                <h2 class="contact__title">Contact <span class="highlight--winter">Us</span></h2>
-            </header>
-            <div class="contact__form-container">
-                <form action="https://formsubmit.co/7ee30be543de03cb75fc753a0e3e4fc3" method="POST" class="contact__form">
-                    <div class="contact__form-field">
-                        <label class="contact__form-label" for="name">Name</label>
-                        <input type="text" class="contact__form-input" name="name" id="name" placeholder="Enter Your Name" required>
-                    </div>
-                    <div class="contact__form-field">
-                        <label class="contact__form-label" for="email">Email</label>
-                        <input type="text" class="contact__form-input" name="email" id="email" required placeholder="Enter Your Email">
-                    </div>
-                    <div class="contact__form-field">
-                        <label class="contact__form-label" for="message">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" class="contact__form-input" required placeholder="Enter Your Message"></textarea>
-                    </div>
-                    <button type="submit" class="button button--inverse">Submit</button>
-                </form>
+      <section class="contact body-section--flex body-section--padding">
+        <header>
+          <h2 class="contact__title">
+            Contact <span class="highlight">Us</span>
+          </h2>
+        </header>
+        <div class="contact__form-container">
+          <form
+            action="https://formsubmit.co/7ee30be543de03cb75fc753a0e3e4fc3"
+            method="POST"
+            class="contact__form"
+            id="contact"
+          >
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input
+                type="text"
+                class="contact__form-input"
+                name="name"
+                id="name"
+                placeholder="Enter Your Name"
+                required
+              />
             </div>
-        </section>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                type="email"
+                class="contact__form-input"
+                name="email"
+                id="email"
+                required
+                placeholder="Enter Your Email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                required
+                placeholder="Enter Your Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="button">Submit</button>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <footer class="footer footer--winter">
-        <div class="footer__container">
-            <div class="footer__row">
-                <div class="footer__col">
-                    <h4 class="footer__title">Precision Lawns</h4>
-                    <hr class="footer__separator">
-                    <ul class="footer__list">
-                        <li class="footer__item">PO Box 714, Canton IL 61520</li>
-                        <li class="footer__item"><a href="tel: 3092147277">(309) 214-7277</a></li>
-                        <li class="footer__item"><a href="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/login/new?source=share_login" target="_blank">Client Hub</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h4 class="footer__title">Social</h4>
-                    <hr class="footer__separator">
-                    <div class="footer__social-links">
-                        <a class="footer__social-link" href="https://www.facebook.com/precisionlawns309" target="_blank">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a class="footer__social-link" href="https://linktr.ee/precisionlawns309" target="_blank">
-                            <i class="fa-solid fa-link"></i>
-                        </a>
-                    </div>
-                </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__row">
+          <div class="footer__col">
+            <h4 class="footer__title">Precision Lawns</h4>
+            <hr class="footer__separator" />
+            <ul class="footer__list">
+              <li class="footer__item">PO Box 714, Canton IL 61520</li>
+              <li class="footer__item">
+                <a href="tel: 3092147277">(309) 214-7277</a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/login/new?source=share_login"
+                  target="_blank"
+                  >Client Hub</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Social</h4>
+            <hr class="footer__separator" />
+            <div class="footer__social-links">
+              <a
+                href="https://www.facebook.com/precisionlawns309"
+                target="_blank"
+                class="footer__social-link"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="https://linktr.ee/precisionlawns309"
+                target="_blank"
+                class="footer__social-link"
+                ><i class="fa-solid fa-link"></i
+              ></a>
             </div>
+          </div>
         </div>
-        <p class="footer__copyright">© Copyright 2023. Made by <a href="https://curtisatchley.com"><b>Curtis Atchley</b></a>.</p>
+      </div>
+      <p class="footer__copyright">
+        © Copyright 2023. Made by
+        <a href="https://curtisatchley.com"><b>Curtis Atchley</b></a
+        >.
+      </p>
     </footer>
+
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

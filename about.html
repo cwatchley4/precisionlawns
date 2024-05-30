@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://precisionlawns309.com" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="logos/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" sizes="any" href="logos/Icon.svg" />
     <link rel="apple-touch-icon" href="logos/apple-touch-icon.png" />
@@ -29,19 +29,6 @@
       src="https://kit.fontawesome.com/bc134222d9.js"
       crossorigin="anonymous"
     ></script>
-    <!-- JOBBER CODE BELOW -->
-    <link
-      rel="stylesheet"
-      media="screen"
-      href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css"
-    />
-    <!-- JOBBER CODE ABOVE -->
-    <!-- TIDIO CODE BELOW -->
-    <script
-      src="//code.tidio.co/sixvgwmragqepba7kxljenid0ulocqix.js"
-      async
-    ></script>
-    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-Y22RPT6MQG"
@@ -59,19 +46,19 @@
     <header class="header">
       <nav class="header__announcements">
         <div class="header__links">
-          <a class="header__link" href="https://precisionlawns309.com/book">
-            <i class="fa-solid fa-calendar-days"></i><span>Book Online</span>
-          </a>
+          <a class="header__link" href="https://precisionlawns309.com/book"
+            ><i class="fa-solid fa-calendar-days"></i
+            ><span>Book Online</span></a
+          >
           <a
             class="header__link"
             href="https://facebook.com/precisionlawns309"
             target="_blank"
+            ><i class="fa-brands fa-facebook"></i><span>Facebook</span></a
           >
-            <i class="fa-brands fa-facebook"></i><span>Facebook</span>
-          </a>
-          <a class="header__link" href="tel:3092147277" target="_blank">
-            <i class="fa-solid fa-phone"></i><span>(309) 214-7277</span>
-          </a>
+          <a class="header__link" href="tel:3092147277" target="_blank"
+            ><i class="fa-solid fa-phone"></i><span>(309) 214-7277</span></a
+          >
         </div>
       </nav>
       <nav class="navbar">
@@ -79,148 +66,129 @@
           <a href="/"
             ><img src="logos/Icon.svg" alt="Precision Lawns logo"
           /></a>
-          <a class="navbar__brand" href="/">Precision Lawns</a>
+          <a href="/" class="navbar__brand">Precision Lawns</a>
         </div>
         <ul class="navbar__links">
-          <li><a class="navbar__link" href="/">Home</a></li>
-          <li><a class="navbar__link" href="about">About</a></li>
-          <li><a class="navbar__link" href="services">Services</a></li>
-          <li><a class="navbar__link" href="winter">Winter</a></li>
-          <li><a class="navbar__link" href="book">Book Online</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="winter">Winter</a></li>
+          <li><a href="book">Book Online</a></li>
         </ul>
         <div class="navbar__toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
       <div class="navbar__dropdown">
-        <li><a class="navbar__dropdown-link" href="/">Home</a></li>
-        <li><a class="navbar__dropdown-link" href="about">About</a></li>
-        <li><a class="navbar__dropdown-link" href="services">Services</a></li>
-        <li><a class="navbar__dropdown-link" href="winter">Winter</a></li>
-        <li><a class="navbar__dropdown-link" href="book">Book Online</a></li>
+        <a class="navbar__dropdown-link" href="/">Home</a>
+        <a class="navbar__dropdown-link" href="about">About</a>
+        <a class="navbar__dropdown-link" href="services">Services</a>
+        <a class="navbar__dropdown-link" href="winter">Winter</a>
+        <a class="navbar__dropdown-link" href="book">Book Online</a>
       </div>
     </header>
 
-    <script>
-      const toggleBtn = document.querySelector(".navbar__toggle");
-      const toggleBtnIcon = document.querySelector(".navbar__toggle i");
-      const dropDownMenu = document.querySelector(".navbar__dropdown");
-
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle("open");
-        const isOpen = dropDownMenu.classList.contains("open");
-
-        toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      };
-    </script>
-
-    <!-- HERO SECTION -->
-    <section class="hero hero--about">
-      <h1 class="hero__title">About <span class="highlight">Us</span></h1>
-      <p class="hero__subtitle">Here to serve</p>
+    <section class="about__hero page-hero">
+      <h1>About <span class="highlight">us</span></h1>
+      <p>Here to serve</p>
     </section>
-
-    <!-- SMALL TOWN SERVICE SECTION -->
-    <section class="small-town-service">
-      <header class="section-header">
-        <h2 class="section-header__title">
-          Small Town <span class="highlight">Service</span>
-        </h2>
-      </header>
-      <div class="small-town-service__container">
-        <div class="small-town-service__image">
-          <img src="photos/sign.jpeg" alt="Small Town Service" />
-        </div>
-        <div class="small-town-service__text">
-          <p>
-            Precision Lawns is a small business that takes pride in serving
-            Canton, IL and surrounding communities. As a part of the community,
-            we value the relationships we build with our clients and prioritize
-            exceptional customer service.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROFESSIONAL WORK SECTION -->
-    <section class="professional-work">
-      <header class="section-header">
-        <h2 class="section-header__title">
-          <span class="highlight">Professional</span> Work
-        </h2>
-      </header>
-      <div class="professional-work__container">
-        <div class="professional-work__image">
-          <img src="photos/ventrac.jpg" alt="Professional Work" />
-        </div>
-        <div class="professional-work__text">
-          <p>
-            We are dedicated to providing professional services with expertise
-            and attention to detail. We understand that every lawn is unique and
-            requires individualized care, which is why we meticulously assess
-            each lawn's needs.
-          </p>
-        </div>
-      </div>
-      <a href="book" class="button">Book a Free Assessment</a>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="contact contact--about" id="contact-about">
-      <header class="section-header">
-        <h2 class="section-header__title">
-          Contact <span class="highlight">Us</span>
-        </h2>
-      </header>
-      <div class="contact__form-container">
-        <form
-          action="https://formsubmit.co/7ee30be543de03cb75fc753a0e3e4fc3"
-          method="POST"
-          class="contact__form"
-          id="contact"
-        >
-          <div class="contact__form-field">
-            <label class="contact__form-label" for="name">Name</label>
-            <input
-              type="text"
-              class="contact__form-input"
-              name="name"
-              id="name"
-              placeholder="Enter Your Name"
-              required
-            />
+    <div class="about__main">
+      <section
+        class="about__small-town-service body-section--flex body-section--padding"
+      >
+        <header>
+          <h2>Small Town <span class="highlight">Service</span></h2>
+        </header>
+        <div class="container">
+          <div class="image">
+            <img src="photos/sign.jpeg" alt="Sign" />
           </div>
-          <div class="contact__form-field">
-            <label class="contact__form-label" for="email">Email</label>
-            <input
-              type="text"
-              class="contact__form-input"
-              name="email"
-              id="email"
-              required
-              placeholder="Enter Your Email"
-            />
+          <div class="text">
+            <p>
+              Precision Lawns is a small business that takes pride in serving
+              Canton, IL and surrounding communities. As a part of the
+              community, we value the relationships we build with our clients
+              and prioritize exceptional customer service.
+            </p>
           </div>
-          <div class="contact__form-field">
-            <label class="contact__form-label" for="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              class="contact__form-input"
-              required
-              placeholder="Enter Your Message"
-            ></textarea>
-          </div>
-          <button type="submit" class="button button--inverse">Submit</button>
-        </form>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- FOOTER SECTION -->
+      <section
+        class="about__professional-work body-section--flex body-section--padding"
+      >
+        <header>
+          <h2><span class="highlight">PROFESSIONAL</span> WORK</h2>
+        </header>
+        <div class="container">
+          <div class="image">
+            <img src="photos/ventrac.jpg" alt="Professional Work" />
+          </div>
+          <div class="text">
+            <p>
+              We are dedicated to providing professional services with expertise
+              and attention to detail. We understand that every lawn is unique
+              and requires individualized care, which is why we meticulously
+              assess each lawn's needs.
+            </p>
+          </div>
+        </div>
+        <a href="book" class="button">Book a Free Assessment</a>
+      </section>
+
+      <section class="contact body-section--flex body-section--padding">
+        <header>
+          <h2 class="contact__title">
+            Contact <span class="highlight">Us</span>
+          </h2>
+        </header>
+        <div class="contact__form-container">
+          <form
+            action="https://formsubmit.co/7ee30be543de03cb75fc753a0e3e4fc3"
+            method="POST"
+            class="contact__form"
+            id="contact"
+          >
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input
+                type="text"
+                class="contact__form-input"
+                name="name"
+                id="name"
+                placeholder="Enter Your Name"
+                required
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                type="email"
+                class="contact__form-input"
+                name="email"
+                id="email"
+                required
+                placeholder="Enter Your Email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                required
+                placeholder="Enter Your Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="button--inverse">Submit</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__row">
@@ -246,19 +214,17 @@
             <hr class="footer__separator" />
             <div class="footer__social-links">
               <a
-                class="footer__social-link"
                 href="https://www.facebook.com/precisionlawns309"
                 target="_blank"
-              >
-                <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a
                 class="footer__social-link"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
                 href="https://linktr.ee/precisionlawns309"
                 target="_blank"
-              >
-                <i class="fa-solid fa-link"></i>
-              </a>
+                class="footer__social-link"
+                ><i class="fa-solid fa-link"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -269,5 +235,7 @@
         >.
       </p>
     </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>

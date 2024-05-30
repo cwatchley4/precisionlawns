@@ -69,12 +69,24 @@ if (new Date() >= startDate) {
 }
 
 // Services
+
+const handleResize = function () {
+  if (window.innerWidth <= 1130) {
+    servicesButton.forEach((b) => (b.style.transform = "translateY(0)"));
+  }
+};
+
+window.addEventListener("resize", handleResize);
+
 servicesButtonsContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".button");
 
-  servicesButton.forEach((b) => b.classList.remove("service--active"));
+  servicesButton.forEach((b) => {
+    b.classList.remove("service--active");
+    b.style.transform = "translateY(0)";
+  });
   clicked.classList.add("service--active");
-
+  if (window.innerWidth >= 1130) clicked.style.transform = "translateY(-25%)";
   servicesDescription.forEach((d) => d.classList.add("hidden"));
   document
     .querySelector(`.services__description--${clicked.dataset.tab}`)
