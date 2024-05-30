@@ -988,8 +988,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .about__main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin: 3rem;
 }
 
 .about__small-town-service,
