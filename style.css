@@ -39,12 +39,23 @@ body {
   justify-content: center;
 }
 
+/* LAZY IMAGE STYLE */
+
+.lazy-img {
+  filter: blur(6px);
+  transition: ease-in-out 0.5s;
+}
+
+.lazy-img.loaded {
+  filter: blur(0);
+}
+
 /* UNIVERSAL PAGE HERO STYLES */
 
 .page-hero {
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

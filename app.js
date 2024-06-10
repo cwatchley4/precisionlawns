@@ -84,7 +84,6 @@ const stickyNav = function (entries) {
   } else {
     header.classList.remove("sticky");
     if (hero) hero.style.paddingTop = `${navHeight}px`;
-    if (pageHero) pageHero.style.paddingTop = `${navHeight}px`;
   }
 };
 
@@ -95,33 +94,59 @@ const mainObserver = new IntersectionObserver(stickyNav, {
 });
 
 if (hero) mainObserver.observe(hero);
-
 if (pageHero) mainObserver.observe(pageHero);
 
-// Services
+// Lazy loading images
 
-const handleResize = function () {
-  if (window.innerWidth <= 1130) {
-    servicesButton.forEach((b) => (b.style.transform = "translateY(0)"));
-  }
+const targetImgs = document.querySelectorAll("img[data-src]");
+console.log(targetImgs);
+
+const handleLazyLoad = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.add("loaded");
+  });
+
+  observer.unobserve(entry.target);
 };
 
-window.addEventListener("resize", handleResize);
-
-servicesButtonsContainer.addEventListener("click", function (e) {
-  const clicked = e.target.closest(".button");
-
-  servicesButton.forEach((b) => {
-    b.classList.remove("service--active");
-    b.style.transform = "translateY(0)";
-  });
-  clicked.classList.add("service--active");
-  if (window.innerWidth >= 1130) clicked.style.transform = "translateY(-25%)";
-  servicesDescription.forEach((d) => d.classList.add("hidden"));
-  document
-    .querySelector(`.services__description--${clicked.dataset.tab}`)
-    .classList.remove("hidden");
+const imgObserver = new IntersectionObserver(handleLazyLoad, {
+  root: null,
+  threshold: 0,
+  rootMargin: "50px",
 });
+
+targetImgs.forEach((img) => imgObserver.observe(img));
+
+// Services section on home page
+
+if (document.querySelector("[data-page='home']")) {
+  const handleResize = function () {
+    if (window.innerWidth <= 1130) {
+      servicesButton.forEach((b) => (b.style.transform = "translateY(0)"));
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+
+  servicesButtonsContainer.addEventListener("click", function (e) {
+    const clicked = e.target.closest(".button");
+
+    servicesButton.forEach((b) => {
+      b.classList.remove("service--active");
+      b.style.transform = "translateY(0)";
+    });
+    clicked.classList.add("service--active");
+    if (window.innerWidth >= 1130) clicked.style.transform = "translateY(-25%)";
+    servicesDescription.forEach((d) => d.classList.add("hidden"));
+    document
+      .querySelector(`.services__description--${clicked.dataset.tab}`)
+      .classList.remove("hidden");
+  });
+}
 
 // Blog
 /*
