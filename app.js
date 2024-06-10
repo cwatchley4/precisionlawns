@@ -9,6 +9,10 @@ const modalOverlay = document.querySelector(".modal-overlay");
 const servicesButtonsContainer = document.querySelector(".services__list");
 const servicesButton = document.querySelectorAll(".services__list .button");
 const servicesDescription = document.querySelectorAll(".services__description");
+const main = document.querySelector("main");
+const header = document.querySelector(".header");
+const hero = document.querySelector(".hero");
+const pageHero = document.querySelector(".page-hero");
 
 // Navbar Button
 const changeDropDownMenuIcon = function () {
@@ -68,6 +72,32 @@ if (new Date() >= startDate) {
   });
 }
 
+// Sticky Header
+
+const navHeight = header.getBoundingClientRect().height;
+let lastScrollY = window.scrollY;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+    if (hero) hero.style.paddingTop = `${navHeight}px`;
+    if (pageHero) pageHero.style.paddingTop = `${navHeight}px`;
+  }
+};
+
+const mainObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+
+if (hero) mainObserver.observe(hero);
+
+if (pageHero) mainObserver.observe(pageHero);
+
 // Services
 
 const handleResize = function () {
@@ -94,6 +124,7 @@ servicesButtonsContainer.addEventListener("click", function (e) {
 });
 
 // Blog
+/*
 if (document.querySelector("[page='blog']")) {
   document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.querySelector(".search-form input");
@@ -186,3 +217,4 @@ if (document.querySelector("[page='blog']")) {
     });
   });
 }
+*/

@@ -51,7 +51,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: white;
-  padding-top: 105.5px;
 }
 
 .page-hero h1 {
@@ -217,11 +216,16 @@ input[type="search"]::-webkit-search-results-decoration {
 /* HEADER AND NAVBAR STYLES */
 
 .header {
-  position: fixed;
+  position: absolute;
   z-index: 5;
   width: 100%;
   background-color: white;
   box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header.sticky {
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
 }
 
 .header__announcements {
@@ -379,7 +383,6 @@ input[type="search"]::-webkit-search-results-decoration {
   justify-content: center;
   text-align: center;
   color: white;
-  padding-top: 105.5px;
 }
 
 .hero__video {
