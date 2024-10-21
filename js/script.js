@@ -30,6 +30,7 @@ toggleBtn.addEventListener("click", function () {
 });
 
 // Modal
+/*
 const year = 2024;
 const month = 9;
 const day = 1;
@@ -71,6 +72,7 @@ if (new Date() >= startDate) {
     if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
   });
 }
+*/
 
 // Sticky Header
 

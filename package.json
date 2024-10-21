@@ -1,0 +1,22 @@
+{
+  "name": "precisionlawns",
+  "version": "1.0.0",
+  "description": "Precision Lawns Canton, IL website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cwatchley4/precisionlawns.git"
+  },
+  "author": "Curtis Atchley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cwatchley4/precisionlawns/issues"
+  },
+  "homepage": "https://github.com/cwatchley4/precisionlawns#readme",
+  "devDependencies": {
+    "sass": "^1.80.3"
+  }
+}

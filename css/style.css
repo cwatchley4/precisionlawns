@@ -455,7 +455,7 @@ input[type="search"]::-webkit-search-results-decoration {
   bottom: 0;
   transform: translateY(35%);
   z-index: -1;
-  background-image: url(backgrounds/underline-1.svg);
+  background-image: url(/assets/images/underline.svg);
 }
 
 .hero__underline--2::after {
@@ -470,7 +470,7 @@ input[type="search"]::-webkit-search-results-decoration {
   bottom: 0;
   transform: translateY(35%);
   z-index: -1;
-  background-image: url(backgrounds/underline-2.svg);
+  background-image: url(/assets/images/underline-2.svg);
 }
 
 .hero__actions {
@@ -602,7 +602,7 @@ input[type="search"]::-webkit-search-results-decoration {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(photos/stripes3.webp);
+  background-image: url(/assets/images/stripes3.webp);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -917,7 +917,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .winter-hero {
-  background-image: url(photos/holiday-lights.webp);
+  background-image: url(assets/images/holiday-lights.webp);
 }
 
 .snow-removal,
@@ -997,7 +997,7 @@ input[type="search"]::-webkit-search-results-decoration {
 /* ABOUT PAGE STYLES */
 
 .about__hero {
-  background-image: url(photos/stripes1.jpeg);
+  background-image: url(../assets/images/stripes1.jpeg);
 }
 
 .about__main {
@@ -1077,14 +1077,14 @@ input[type="search"]::-webkit-search-results-decoration {
 /* HERO SECTION */
 
 .services__hero {
-  background-image: url(photos/stripes2.webp);
+  background-image: url(assets/images/stripes2.webp);
 }
 
 /* MOW TRIM CLEAN UP SECTION */
 
 .mowtrimcleanup {
   width: 100%;
-  background-image: url(backgrounds/stripes-bg-green.webp);
+  background-image: url(assets/images/stripes-bg-green.webp);
 }
 
 .mowtrimcleanup .container {

@@ -1,5 +1,17 @@
 RewriteEngine On
+
+# Redirect requests to URLs without 'pages'
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(about|services|contact)$ pages/$1 [L]
+
+# If the request is not a real file, map URLs without extension to .html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-RewriteRule ^/index(.*)$ /home$1 [L]
+# Redirect /index to /home
+RewriteRule ^index(.*)$ /home$1 [L]
+
+# Allow requests for .js, .css, and other static files
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule \.(js|css|png|jpg|gif|svg)$ - [L]
