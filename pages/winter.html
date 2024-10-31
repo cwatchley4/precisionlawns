@@ -51,7 +51,7 @@
     </script>
   </head>
   <body>
-    <div class="modal hidden">
+    <!-- <div class="modal hidden">
       <i class="modal__close fa-solid fa-xmark"></i>
       <div class="modal__content">
         <h2 class="modal__title">Spring is Coming...</h2>
@@ -60,97 +60,100 @@
           mowing season and spring clean ups. Let us take care of that for you.
           To book a free assessment, click the button below.
         </p>
-        <a class="button button--inverse" href="/book"
-          >Book a Free Assessment</a
-        >
+        <a class="btn btn--white" href="/book">Book a Free Assessment</a>
       </div>
     </div>
-    <div class="modal-overlay hidden"></div>
+    <div class="modal-overlay hidden"></div> -->
     <header class="header">
-      <nav class="header__announcements">
-        <div class="header__links">
-          <a href="https://precisionlawns309.com/book" class="header__link"
-            ><i class="fa-solid fa-calendar-days"></i
-            ><span>Book Online</span></a
-          >
-          <a
-            href="https://facebook.com/precisionlawns309"
-            target="_blank"
-            class="header__link"
-            ><i class="fa-brands fa-facebook"></i><span>Facebook</span></a
-          >
-          <a href="tel:3092147277" target="_blank" class="header__link"
-            ><i class="fa-solid fa-phone"></i><span>(309) 214-7277</span></a
-          >
-        </div>
-      </nav>
-      <nav class="navbar">
-        <div class="navbar__logo">
+      <div class="header__announcement-bar">
+        <a
+          href="https://precisionlawns309.com/book"
+          class="header__announcement-bar-link"
+          ><i
+            class="fa-solid fa-calendar-days header__announcement-bar-link-icon"
+          ></i
+          ><span class="header__announcement-bar-text">Book Online</span></a
+        >
+        <a
+          href="https://facebook.com/precisionlawns309"
+          target="_blank"
+          class="header__announcement-bar-link"
+          ><i
+            class="fa-brands fa-facebook header__announcement-bar-link-icon"
+          ></i
+          ><span class="header__announcement-bar-text">Facebook</span></a
+        >
+        <a
+          href="tel:3092147277"
+          target="_blank"
+          class="header__announcement-bar-link"
+          ><i class="fa-solid fa-phone header__announcement-bar-link-icon"></i
+          ><span class="header__announcement-bar-text">(309) 214-7277</span></a
+        >
+      </div>
+      <nav class="navbar__main">
+        <div class="navbar__main-logo">
           <a href="/"
-            ><img src="../assets/icons/icon.svg" alt="Precision Lawns logo"
+            ><img
+              src="../assets/icons/icon.svg"
+              alt="Precision Lawns logo"
+              class="navbar__main-logo-img"
           /></a>
-          <a class="navbar__brand" href="/">Precision Lawns</a>
+          <a class="navbar__main-logo-title" href="/">Precision Lawns</a>
         </div>
-        <ul class="navbar__links">
-          <li><a class="navbar__link" href="/">Home</a></li>
-          <li><a class="navbar__link" href="/about">About</a></li>
-          <li><a class="navbar__link" href="/services">Services</a></li>
-          <li><a class="navbar__link" href="/winter">Winter</a></li>
-          <li><a class="navbar__link" href="/book">Book Online</a></li>
-        </ul>
-        <div class="navbar__toggle">
-          <i class="fa-solid fa-bars"></i>
+        <div class="navbar__main-links">
+          <a class="navbar__main-link" href="/">Home</a>
+          <a class="navbar__main-link" href="/about">About</a>
+          <a class="navbar__main-link" href="/services">Services</a>
+          <a class="navbar__main-link" href="/winter">Winter</a>
+          <a class="navbar__main-link" href="/book">Book Online</a>
+        </div>
+        <div class="navbar__toggle-btn">
+          <i class="navbar__toggle-btn-icon fa-solid fa-bars"></i>
         </div>
       </nav>
-      <div class="navbar__dropdown">
-        <li><a class="navbar__dropdown-link" href="/">Home</a></li>
-        <li><a class="navbar__dropdown-link" href="/about">About</a></li>
-        <li>
-          <a class="navbar__dropdown-link" href="/services">Services</a>
-        </li>
-        <li>
-          <a class="navbar__dropdown-link" href="/winter">Winter</a>
-        </li>
-        <li>
-          <a class="navbar__dropdown-link" href="/book">Book Online</a>
-        </li>
+      <div class="navbar__mobile">
+        <a class="navbar__mobile-link" href="/">Home</a>
+        <a class="navbar__mobile-link" href="/about">About</a>
+        <a class="navbar__mobile-link" href="/services">Services</a>
+        <a class="navbar__mobile-link" href="/winter">Winter</a>
+        <a class="navbar__mobile-link" href="/book">Book Online</a>
       </div>
     </header>
 
     <main>
-      <section class="winter-hero page-hero">
-        <h1>Winter <span class="highlight">Services</span></h1>
-        <p>Snow removal & holiday lighting</p>
+      <section class="hero--winter">
+        <h2 class="hero--winter__title">
+          Winter <span class="highlight">Services</span>
+        </h2>
+        <p class="hero--winter__subtitle">Snow removal & holiday lighting</p>
       </section>
 
-      <section class="snow-removal body-section--padding body-section--flex">
-        <header>
-          <h2>Snow <span class="highlight">Removal</span></h2>
+      <section class="snow-removal">
+        <header class="snow-removal__header">
+          <h2 class="snow-removal__title">
+            Snow <span class="highlight">Removal</span>
+          </h2>
         </header>
-        <div class="container">
-          <div class="image">
+        <div class="snow-removal__container">
+          <div class="snow-removal__img-container">
             <img
-              class="lazy-img"
-              src="photos/plow-lazy.pjg"
-              data-src="photos/plow.webp"
+              class="snow-removal__img lazy-img"
+              src="../assets/images/plow-lazy.jpg"
+              data-src="../assets/images/plow.webp"
               alt="Snow Plow"
             />
           </div>
-          <div class="text">
-            <p>
-              Precision Lawns offers snow removal in two ways:
-              <b>plowing</b> and <b>salting</b>. Click the button below to book
-              a free assessment and we will give you a quote for this coming
-              winter.
-            </p>
-          </div>
+          <p class="snow-removal__description">
+            Precision Lawns offers snow removal in two ways:
+            <b>plowing</b> and <b>salting</b>. Click the button below to book a
+            free assessment and we will give you a quote for this coming winter.
+          </p>
         </div>
-        <a href="book" class="button">Get a Quote</a>
+        <a href="book" class="btn btn--green">Get a Quote</a>
       </section>
 
-      <section
-        class="holiday-lighting body-section--padding body-section--flex"
-      >
+      <!-- <section class="holiday-lighting">
         <header>
           <h2><span class="highlight">Holiday</span> Lighting</h2>
         </header>
@@ -158,8 +161,8 @@
           <div class="image">
             <img
               class="lazy-img"
-              src="photos/holiday-lights-lazy.jpeg"
-              data-src="photos/holiday-lights.webp"
+              src="../assets/images/holiday-lights-lazy.jpg"
+              data-src="../assets/images/holiday-lights.webp"
               alt="Holiday Lights"
             />
           </div>
@@ -170,7 +173,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="contact body-section--flex body-section--padding">
         <header>
@@ -219,7 +222,7 @@
                 placeholder="Enter Your Message"
               ></textarea>
             </div>
-            <button type="submit" class="button">Submit</button>
+            <button type="submit" class="btn btn--green">Submit</button>
           </form>
         </div>
       </section>

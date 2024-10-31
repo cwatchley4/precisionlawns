@@ -1,0 +1,310 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+/* HOME PAGE SERVICES SECTION STYLES */
+
+.services {
+  text-align: center;
+  @include m.flex-center(column);
+  @include m.section-layout;
+}
+
+.services__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.service--active {
+  background-color: v.$primary-color--active;
+  transition: ease 0.5s;
+}
+
+.service--raised {
+  transform: translateY(-25%);
+  transition: ease 0.5s;
+}
+
+.services__description {
+  background-color: v.$light-gray-color;
+  padding: 1.5rem;
+  border-radius: v.$border-radius;
+  max-width: 70rem;
+}
+
+.service {
+  background-color: v.$light-gray-color;
+  padding: 1.5rem;
+  border-radius: v.$border-radius;
+  width: 187px;
+}
+
+.service__icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: v.$white-color;
+}
+
+/* Transition Section */
+
+.transition {
+  width: 100%;
+  min-height: 75vh;
+  @include m.flex-center(column);
+  @include m.section-layout;
+  background-image: url(/assets/images/stripes3.webp);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.transition__title {
+  font-size: 7vw;
+  text-shadow: v.$text-shadow v.$text-shadow-color;
+  color: v.$white-color;
+}
+
+@media (max-width: 800px) {
+  .transition {
+    background-attachment: scroll;
+  }
+}
+
+/* HOME PAGE GETTING STARTED SECTION STYLES */
+
+.getting-started {
+  text-align: center;
+  @include m.flex-center(column);
+  @include m.section-layout;
+}
+
+.getting-started__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 6rem;
+}
+
+.step {
+  margin: 1rem 1.5rem;
+  background-color: v.$light-gray-color;
+  border-radius: v.$border-radius;
+  padding: 2rem;
+  @include m.flex-center(column);
+  gap: 2rem;
+}
+
+.step__icon {
+  font-size: 7rem;
+  color: v.$primary-color;
+}
+
+.step__number {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333333;
+}
+
+.step__description {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: black;
+}
+
+@media (max-width: 650px) {
+  .getting-started__steps {
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+  }
+}
+
+/* HOME PAGE REVIEWS SECTION STYLES */
+
+.reviews {
+  background-color: v.$light-gray-color;
+  @include m.section-layout;
+}
+
+.reviews__header {
+  margin-bottom: 1rem;
+}
+
+/* MOW TRIM CLEAN UP SECTION */
+
+.mowtrimcleanup {
+  width: 100%;
+  background-image: url(assets/images/stripes-bg-green.webp);
+}
+
+.mowtrimcleanup .container {
+  width: 100%;
+  max-width: 110rem;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem;
+  margin: auto;
+}
+
+.mowtrimcleanup .container .text {
+  max-width: 100%;
+  color: v.$white-color;
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+}
+
+.mowtrimcleanup .container .text h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.mowtrimcleanup .container .text p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  max-width: 40rem;
+  flex-basis: 50%;
+}
+
+.mowtrimcleanup .swiper {
+  max-width: 50rem;
+}
+
+.mowtrimcleanup .swiper-slide {
+  border-radius: v.$border-radius;
+  object-fit: cover;
+}
+
+/* MOW TRIM CLEAN UP RESPONSIVE DESIGN */
+
+@media (max-width: 965px) {
+  .mowtrimcleanup .container {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    place-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 685px) {
+  .mowtrimcleanup .swiper {
+    max-width: 30rem;
+  }
+  .mowtrimcleanup .container {
+    gap: 2rem;
+  }
+  .mowtrimcleanup .container .text h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 405px) {
+  .mowtrimcleanup .swiper {
+    max-width: 22.5rem;
+  }
+  .mowtrimcleanup .container .text h2 {
+    font-size: 2rem;
+  }
+}
+
+/* KEY SERVICES SECTION */
+
+.key-services {
+  margin: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.key-services header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.key-services header h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.cards-container {
+  display: grid;
+  place-items: center;
+  margin-bottom: 4rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.cards .card {
+  background-color: #53ae4d;
+  color: v.$white-color;
+  padding: 2rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  border-radius: v.$border-radius;
+}
+
+.cards .card h3 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  translate: 0 3rem;
+  transition: 0.2s ease-in-out;
+}
+
+.cards .card p {
+  translate: 0 30rem;
+  transition: 0.2s ease-in-out;
+}
+
+.cards .card:hover > p {
+  translate: 0 0;
+}
+
+.cards .card:hover > h3 {
+  translate: 0 0;
+}
+
+/* KEY SERVICES SECTION RESPONSIVE DESIGN */
+
+@media (max-width: 1115px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(25rem, 30rem));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .cards {
+    grid-template-columns: repeat(1, minmax(25rem, 30rem));
+    gap: 2rem;
+  }
+  .key-services header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (hover: none) {
+  .cards .card p {
+    translate: 0 0;
+  }
+  .cards .card h3 {
+    translate: 0 0;
+  }
+}

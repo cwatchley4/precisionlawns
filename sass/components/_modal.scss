@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as v;
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background: linear-gradient(to bottom right, #4da147, #69e860);
+  padding: 4rem;
+  border-radius: v.$border-radius;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__description,
+.modal__text,
+.btn--modal {
+  color: white;
+}
+
+.modal__overlay,
+.modal__close {
+  position: absolute;
+}
+
+.modal__overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(0.3rem);
+  z-index: 5;
+}
+
+.modal__close {
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 11;
+}

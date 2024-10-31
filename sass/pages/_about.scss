@@ -1,0 +1,80 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.hero {
+  &--about {
+    background-image: url(../assets/images/stripes1.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    @include m.flex-center(column);
+    text-align: center;
+
+    &__title {
+      padding: 1rem 3rem;
+      @include m.title-text(8rem);
+    }
+
+    &__subtitle {
+      padding: 0 3rem;
+      @include m.title-text(4rem);
+    }
+  }
+}
+
+.about__main {
+  display: flex;
+  flex-direction: column;
+  // @include m.main-layout;
+}
+
+.about__small-town-service,
+.about__professional-work {
+  @include m.flex-center(column);
+  @include m.section-layout;
+  padding-bottom: 0;
+}
+
+.small-town-service__header,
+.professional-work__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.small-town-service__container,
+.professional-work__container {
+  @include m.flex-center(row);
+  gap: 2rem;
+}
+
+.professional-work__container {
+  flex-direction: row-reverse;
+  margin-bottom: 2rem;
+}
+
+.small-town-service__description,
+.professional-work__description {
+  background-color: v.$light-gray-color;
+  padding: 1rem;
+  border-radius: v.$border-radius;
+  max-width: 300px;
+}
+
+.small-town-service__img-container,
+.professional-work__img-container {
+  width: 100%;
+  flex-basis: 50%;
+}
+
+.small-town-service__img,
+.professional-work__img {
+  width: 100%;
+  border-radius: v.$border-radius;
+}
+
+@media (max-width: 520px) {
+  .small-town-service__container,
+  .professional-work__container {
+    flex-direction: column;
+  }
+}

@@ -119,7 +119,7 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <div class="modal hidden">
+    <!-- <div class="modal hidden">
       <i class="modal__close fa-solid fa-xmark"></i>
       <div class="modal__content">
         <h2 class="modal__title">Spring is Coming...</h2>
@@ -128,60 +128,69 @@
           mowing season and spring clean ups. Let us take care of that for you.
           To book a free assessment, click the button below.
         </p>
-        <a class="button button--inverse" href="/book"
+        <a class="btn btn--white btn--modal" href="/book"
           >Book a Free Assessment</a
         >
       </div>
-    </div>
-    <div class="modal-overlay hidden"></div>
+    </div> -->
+    <!-- <div class="modal-overlay hidden"></div> -->
     <header class="header">
-      <nav class="header__announcements">
-        <div class="header__links">
-          <a href="https://precisionlawns309.com/book" class="header__link"
-            ><i class="fa-solid fa-calendar-days"></i
-            ><span>Book Online</span></a
-          >
-          <a
-            href="https://facebook.com/precisionlawns309"
-            target="_blank"
-            class="header__link"
-            ><i class="fa-brands fa-facebook"></i><span>Facebook</span></a
-          >
-          <a href="tel:3092147277" target="_blank" class="header__link"
-            ><i class="fa-solid fa-phone"></i><span>(309) 214-7277</span></a
-          >
-        </div>
-      </nav>
-      <nav class="navbar">
-        <div class="navbar__logo">
+      <div class="header__announcement-bar">
+        <a
+          href="https://precisionlawns309.com/book"
+          class="header__announcement-bar-link"
+          ><i
+            class="fa-solid fa-calendar-days header__announcement-bar-link-icon"
+          ></i
+          ><span class="header__announcement-bar-text">Book Online</span></a
+        >
+        <a
+          href="https://facebook.com/precisionlawns309"
+          target="_blank"
+          class="header__announcement-bar-link"
+          ><i
+            class="fa-brands fa-facebook header__announcement-bar-link-icon"
+          ></i
+          ><span class="header__announcement-bar-text">Facebook</span></a
+        >
+        <a
+          href="tel:3092147277"
+          target="_blank"
+          class="header__announcement-bar-link"
+          ><i class="fa-solid fa-phone header__announcement-bar-link-icon"></i
+          ><span class="header__announcement-bar-text">(309) 214-7277</span></a
+        >
+      </div>
+      <nav class="navbar__main">
+        <div class="navbar__main-logo">
           <a href="/"
-            ><img src="assets/icons/icon.svg" alt="Precision Lawns logo"
+            ><img
+              src="assets/icons/icon.svg"
+              alt="Precision Lawns logo"
+              class="navbar__main-logo-img"
           /></a>
-          <a class="navbar__brand" href="/">Precision Lawns</a>
+          <a class="navbar__main-logo-title" href="/">Precision Lawns</a>
         </div>
-        <ul class="navbar__links">
-          <li><a class="navbar__link" href="/">Home</a></li>
-          <li><a class="navbar__link" href="/about">About</a></li>
-          <li><a class="navbar__link" href="/services">Services</a></li>
-          <li><a class="navbar__link" href="/winter">Winter</a></li>
-          <li><a class="navbar__link" href="/book">Book Online</a></li>
-        </ul>
-        <div class="navbar__toggle">
-          <i class="fa-solid fa-bars"></i>
+        <div class="navbar__main-links">
+          <a class="navbar__main-link" href="/">Home</a>
+          <a class="navbar__main-link" href="/about">About</a>
+          <a class="navbar__main-link" href="/services">Services</a>
+          <a class="navbar__main-link" href="/winter">Winter</a>
+          <a class="navbar__main-link" href="/book">Book Online</a>
+        </div>
+        <div class="navbar__toggle-btn">
+          <i class="navbar__toggle-btn-icon fa-solid fa-bars"></i>
         </div>
       </nav>
-      <div class="navbar__dropdown">
-        <li><a class="navbar__dropdown-link" href="/">Home</a></li>
-        <li><a class="navbar__dropdown-link" href="/about">About</a></li>
-        <li>
-          <a class="navbar__dropdown-link" href="/services">Services</a>
-        </li>
-        <li>
-          <a class="navbar__dropdown-link" href="/winter">Winter</a>
-        </li>
-        <li>
-          <a class="navbar__dropdown-link" href="/book">Book Online</a>
-        </li>
+      <div class="navbar__mobile">
+        <a class="navbar__mobile-link" href="/">Home</a>
+        <a class="navbar__mobile-link" href="/about">About</a>
+
+        <a class="navbar__mobile-link" href="/services">Services</a>
+
+        <a class="navbar__mobile-link" href="/winter">Winter</a>
+
+        <a class="navbar__mobile-link" href="/book">Book Online</a>
       </div>
     </header>
     <section class="hero">
@@ -194,44 +203,48 @@
         src="assets/videos/header-bg-2.mp4"
         type="video/mp4"
       ></video>
-      <h1 class="hero__tagline">
+      <h1 class="hero__title">
         Precision Lawns.<br />Professional lawn care in Canton, IL.
       </h1>
       <div class="hero__text">
-        <h2 class="hero__title">
-          Transforming your <span class="hero__underline--1">lawn</span>.
-        </h2>
-        <h2 class="hero__subtitle">
-          One <span class="hero__underline--2">stripe</span> at a time.
-        </h2>
+        <div class="hero__tagline-1">
+          Transforming your <span class="hero__underline-1">lawn</span>.
+        </div>
+        <div class="hero__tagline-1">
+          One <span class="hero__underline-2">stripe</span> at a time.
+        </div>
       </div>
-      <div class="hero__actions">
-        <a class="button" href="book">Book a Free Assessment</a>
-        <a class="button" href="tel: 3092147277">Call Today (309) 214-7277</a>
+      <div class="hero__btns">
+        <a class="btn btn--hero btn--green" href="book"
+          >Book a Free Assessment</a
+        >
+        <a class="btn btn--hero btn--green" href="tel: 3092147277"
+          >Call Today (309) 214-7277</a
+        >
       </div>
     </section>
-    <main>
-      <section class="services body-section--padding body-section--flex">
+    <main class="home__main">
+      <section class="services">
         <header class="services__header">
           <h2 class="services__title">
             Our <span class="highlight">Lawn</span> Care Services
           </h2>
-          <p class="services__intro">
+          <h3 class="services__subtitle">
             At Precision Lawns, we're here for you whenever you need lawn care
             in Fulton County, IL.
-          </p>
+          </h3>
         </header>
         <div class="services__list">
-          <button class="button service--active" data-tab="1">
+          <button class="btn btn--green service--active" data-tab="1">
             <i class="service__icon fa-solid fa-seedling"></i>Maintenance
           </button>
-          <button class="button" data-tab="2">
+          <button class="btn btn--green" data-tab="2">
             <i class="service__icon fa-solid fa-water"></i>Seeding
           </button>
-          <button class="button" data-tab="3">
+          <button class="btn btn--green" data-tab="3">
             <i class="service__icon fa-solid fa-wind"></i>Aeration
           </button>
-          <button class="button" data-tab="4">
+          <button class="btn btn--green" data-tab="4">
             <i class="service__icon fa-solid fa-scissors"></i>Fertilization
           </button>
         </div>
@@ -261,14 +274,14 @@
           fertilizers, we promote healthy growth, vibrant color, and increased
           resistance to pests and diseases.
         </p>
-        <a class="button" href="book">Book a Free Assessment</a>
+        <a class="btn btn--green" href="book">Book a Free Assessment</a>
       </section>
       <section class="transition">
         <h2 class="transition__title">
           Enhance the <span class="highlight">Beauty</span> of Your Lawn
         </h2>
       </section>
-      <section class="getting-started body-section--padding body-section--flex">
+      <section class="getting-started">
         <header class="getting-started__header">
           <h2 class="getting-started__title">
             Getting started is <span class="highlight">simple</span>
@@ -297,9 +310,9 @@
             </figcaption>
           </figure>
         </div>
-        <a class="button" href="book">Book a Free Assessment</a>
+        <a class="btn btn--green" href="book">Book a Free Assessment</a>
       </section>
-      <section class="reviews body-section--padding">
+      <section class="reviews">
         <header class="reviews__header">
           <h2 class="reviews__title">
             What our <span class="highlight">Customers</span> Say
@@ -314,10 +327,7 @@
           <div class="elfsight-app-2dad0685-7035-415f-8b95-16784c86d16a"></div>
         </div>
       </section>
-      <section
-        class="contact body-section--padding body-section--flex"
-        id="contact"
-      >
+      <section class="contact" id="contact">
         <header class="contact__header">
           <h2 class="contact__title">
             Contact <span class="highlight">Us</span>
@@ -363,7 +373,7 @@
                 placeholder="Enter Your Message"
               ></textarea>
             </div>
-            <button type="submit" class="button button--inverse">Submit</button>
+            <button type="submit" class="btn btn--white">Submit</button>
           </form>
         </div>
       </section>
@@ -383,6 +393,7 @@
                 <a
                   href="https://clienthub.getjobber.com/client_hubs/f9856854-13f6-4580-95ae-9ae7b3983153/login/new?source=share_login"
                   target="_blank"
+                  class="footer__link"
                   >Client Hub</a
                 >
               </li>
@@ -391,7 +402,7 @@
           <div class="footer__col">
             <h4 class="footer__title">Social</h4>
             <hr class="footer__separator" />
-            <div class="footer__social-links">
+            <div class="footer__social">
               <a
                 href="https://www.facebook.com/precisionlawns309"
                 target="_blank"
@@ -410,7 +421,8 @@
       </div>
       <p class="footer__copyright">
         © Copyright 2023. Made by
-        <a href="https://curtisatchley.com"><b>Curtis Atchley</b></a
+        <a href="https://curtisatchley.com" class="footer__copyright-link"
+          ><b>Curtis Atchley</b></a
         >.
       </p>
     </footer>

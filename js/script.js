@@ -1,32 +1,33 @@
 "use strict";
 
-const toggleBtn = document.querySelector(".navbar__toggle");
-const toggleBtnIcon = document.querySelector(".navbar__toggle i");
-const dropDownMenu = document.querySelector(".navbar__dropdown");
+const toggleBtn = document.querySelector(".navbar__toggle-btn");
+const toggleBtnIcon = document.querySelector(".navbar__toggle-btn-icon");
+const mobileMenu = document.querySelector(".navbar__mobile");
 const closeModalButton = document.querySelector(".modal__close");
 const modal = document.querySelector(".modal");
 const modalOverlay = document.querySelector(".modal-overlay");
 const servicesButtonsContainer = document.querySelector(".services__list");
-const servicesButton = document.querySelectorAll(".services__list .button");
+const servicesButton = document.querySelectorAll(".services__list .btn");
 const servicesDescription = document.querySelectorAll(".services__description");
 const main = document.querySelector("main");
 const header = document.querySelector(".header");
 const hero = document.querySelector(".hero");
+const heroBgVideo = document.querySelector(".hero__video");
 const pageHero = document.querySelector(".page-hero");
 
 // Navbar Button
-const changeDropDownMenuIcon = function () {
-  const isOpen = dropDownMenu.classList.contains("open");
+const changeMobileMenuIcon = function () {
+  const isOpen = mobileMenu.classList.contains("open");
   toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
 };
 
-const toggleDropDownMenu = function () {
-  dropDownMenu.classList.toggle("open");
+const toggleMobileMenu = function () {
+  mobileMenu.classList.toggle("navbar__mobile--open");
 };
 
 toggleBtn.addEventListener("click", function () {
-  toggleDropDownMenu();
-  changeDropDownMenuIcon();
+  toggleMobileMenu();
+  changeMobileMenuIcon();
 });
 
 // Modal
@@ -79,13 +80,16 @@ if (new Date() >= startDate) {
 const navHeight = header.getBoundingClientRect().height;
 let lastScrollY = window.scrollY;
 
+console.log(navHeight);
+
 const stickyNav = function (entries) {
   const [entry] = entries;
-  if (!entry.isIntersecting) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-    if (hero) hero.style.paddingTop = `${navHeight}px`;
+  !entry.isIntersecting
+    ? header.classList.replace("header", "header--sticky")
+    : header.classList.replace("header--sticky", "header");
+  if (hero) {
+    hero.style.paddingTop = `${navHeight}px`;
+    heroBgVideo.style.height = `calc(100vh - ${navHeight}px)`;
   }
 };
 
@@ -109,7 +113,7 @@ const handleLazyLoad = function (entries, observer) {
   entry.target.src = entry.target.dataset.src;
 
   entry.target.addEventListener("load", function () {
-    entry.target.classList.add("loaded");
+    entry.target.classList.replace("lazy_img", "lazy_img--loaded");
   });
 
   observer.unobserve(entry.target);
@@ -135,7 +139,7 @@ if (document.querySelector("[data-page='home']")) {
   window.addEventListener("resize", handleResize);
 
   servicesButtonsContainer.addEventListener("click", function (e) {
-    const clicked = e.target.closest(".button");
+    const clicked = e.target.closest(".btn");
 
     servicesButton.forEach((b) => {
       b.classList.remove("service--active");

@@ -41,106 +41,114 @@
       gtag("js", new Date());
       gtag("config", "G-Y22RPT6MQG");
     </script>
+    <script defer src="../js/script.js"></script>
   </head>
   <body>
     <header class="header">
-      <nav class="header__announcements">
-        <div class="header__links">
-          <a href="https://precisionlawns309.com/book" class="header__link"
-            ><i class="fa-solid fa-calendar-days"></i
-            ><span>Book Online</span></a
-          >
-          <a
-            href="https://facebook.com/precisionlawns309"
-            target="_blank"
-            class="header__link"
-            ><i class="fa-brands fa-facebook"></i><span>Facebook</span></a
-          >
-          <a href="tel:3092147277" target="_blank" class="header__link"
-            ><i class="fa-solid fa-phone"></i><span>(309) 214-7277</span></a
-          >
-        </div>
-      </nav>
-      <nav class="navbar">
-        <div class="navbar__logo">
+      <div class="header__announcement-bar">
+        <a
+          href="https://precisionlawns309.com/book"
+          class="header__announcement-bar-link"
+          ><i
+            class="fa-solid fa-calendar-days header__announcement-bar-link-icon"
+          ></i
+          ><span class="header__announcement-bar-text">Book Online</span></a
+        >
+        <a
+          href="https://facebook.com/precisionlawns309"
+          target="_blank"
+          class="header__announcement-bar-link"
+          ><i
+            class="fa-brands fa-facebook header__announcement-bar-link-icon"
+          ></i
+          ><span class="header__announcement-bar-text">Facebook</span></a
+        >
+        <a
+          href="tel:3092147277"
+          target="_blank"
+          class="header__announcement-bar-link"
+          ><i class="fa-solid fa-phone header__announcement-bar-link-icon"></i
+          ><span class="header__announcement-bar-text">(309) 214-7277</span></a
+        >
+      </div>
+      <nav class="navbar__main">
+        <div class="navbar__main-logo">
           <a href="/"
-            ><img src="../assets/icons/icon.svg" alt="Precision Lawns logo"
+            ><img
+              src="../assets/icons/icon.svg"
+              alt="Precision Lawns logo"
+              class="navbar__main-logo-img"
           /></a>
-          <a class="navbar__brand" href="/">Precision Lawns</a>
+          <a class="navbar__main-logo-title" href="/">Precision Lawns</a>
         </div>
-        <ul class="navbar__links">
-          <li><a class="navbar__link" href="/">Home</a></li>
-          <li><a class="navbar__link" href="/about">About</a></li>
-          <li><a class="navbar__link" href="/services">Services</a></li>
-          <li><a class="navbar__link" href="/winter">Winter</a></li>
-          <li><a class="navbar__link" href="/book">Book Online</a></li>
-        </ul>
-        <div class="navbar__toggle">
-          <i class="fa-solid fa-bars"></i>
+        <div class="navbar__main-links">
+          <a class="navbar__main-link" href="/">Home</a>
+          <a class="navbar__main-link" href="/about">About</a>
+          <a class="navbar__main-link" href="/services">Services</a>
+          <a class="navbar__main-link" href="/winter">Winter</a>
+          <a class="navbar__main-link" href="/book">Book Online</a>
+        </div>
+        <div class="navbar__toggle-btn">
+          <i class="navbar__toggle-btn-icon fa-solid fa-bars"></i>
         </div>
       </nav>
-      <div class="navbar__dropdown">
-        <li><a class="navbar__dropdown-link" href="/">Home</a></li>
-        <li><a class="navbar__dropdown-link" href="/about">About</a></li>
-        <li>
-          <a class="navbar__dropdown-link" href="/services">Services</a>
-        </li>
-        <li>
-          <a class="navbar__dropdown-link" href="/winter">Winter</a>
-        </li>
-        <li>
-          <a class="navbar__dropdown-link" href="/book">Book Online</a>
-        </li>
+      <div class="navbar__mobile">
+        <a class="navbar__mobile-link" href="/">Home</a>
+        <a class="navbar__mobile-link" href="/about">About</a>
+        <a class="navbar__mobile-link" href="/services">Services</a>
+        <a class="navbar__mobile-link" href="/winter">Winter</a>
+        <a class="navbar__mobile-link" href="/book">Book Online</a>
       </div>
     </header>
 
-    <section class="about__hero page-hero">
-      <h1>About <span class="highlight">us</span></h1>
-      <p>Here to serve</p>
+    <section class="hero--about">
+      <h1 class="hero--about__title">
+        About <span class="highlight">us</span>
+      </h1>
+      <p class="hero--about__subtitle">Here to serve</p>
     </section>
+
     <div class="about__main">
-      <section
-        class="about__small-town-service body-section--flex body-section--padding"
-      >
-        <header>
-          <h2>Small Town <span class="highlight">Service</span></h2>
+      <section class="about__small-town-service">
+        <header class="small-town-service__header">
+          <h2 class="small-town-service__title">
+            Small Town <span class="highlight">Service</span>
+          </h2>
         </header>
-        <div class="container">
-          <div class="image">
+        <div class="small-town-service__container">
+          <div class="small-town-service__img-container">
             <img
-              class="lazy-img"
+              class="small-town-service__img lazy-img"
               src="../assets/images/sign-lazy.jpg"
               data-src="../assets/images/sign.jpeg"
               alt="Sign"
             />
           </div>
-          <div class="text">
-            <p>
-              Precision Lawns is a small business that takes pride in serving
-              Canton, IL and surrounding communities. As a part of the
-              community, we value the relationships we build with our clients
-              and prioritize exceptional customer service.
-            </p>
-          </div>
+          <p class="small-town-service__description">
+            Precision Lawns is a small business that takes pride in serving
+            Canton, IL and surrounding communities. As a part of the community,
+            we value the relationships we build with our clients and prioritize
+            exceptional customer service.
+          </p>
         </div>
       </section>
 
-      <section
-        class="about__professional-work body-section--flex body-section--padding"
-      >
-        <header>
-          <h2><span class="highlight">PROFESSIONAL</span> WORK</h2>
+      <section class="about__professional-work">
+        <header class="professional-work__header">
+          <h2 class="professional-work__title">
+            <span class="highlight">PROFESSIONAL</span> WORK
+          </h2>
         </header>
-        <div class="container">
-          <div class="image">
+        <div class="professional-work__container">
+          <div class="professional-work__img-container">
             <img
-              class="lazy-img"
+              class="professional-work__img lazy-img"
               src="../assets/images/ventrac-lazy.jpg"
               data-src="../assets/images/ventrac.jpg"
               alt="An image of the owner on a Ventrac riding mower."
             />
           </div>
-          <div class="text">
+          <div class="professional-work__description">
             <p>
               We are dedicated to providing professional services with expertise
               and attention to detail. We understand that every lawn is unique
@@ -149,11 +157,11 @@
             </p>
           </div>
         </div>
-        <a href="book" class="button">Book a Free Assessment</a>
+        <a href="book" class="btn btn--green">Book a Free Assessment</a>
       </section>
 
-      <section class="contact body-section--flex body-section--padding">
-        <header>
+      <section class="contact">
+        <header class="contact__header">
           <h2 class="contact__title">
             Contact <span class="highlight">Us</span>
           </h2>
@@ -199,7 +207,7 @@
                 placeholder="Enter Your Message"
               ></textarea>
             </div>
-            <button type="submit" class="button--inverse">Submit</button>
+            <button type="submit" class="btn btn--white">Submit</button>
           </form>
         </div>
       </section>
@@ -251,7 +259,5 @@
         >.
       </p>
     </footer>
-
-    <script src="../js/script.js"></script>
   </body>
 </html>
