@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as v;
+
+.navbar {
+  &__main {
+    width: 100%;
+    height: 7rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  &__main-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__main-logo {
+    &-title {
+      font-size: 2.5rem;
+      font-family: v.$title-font;
+      font-weight: 400;
+      text-transform: capitalize;
+      color: v.$primary-color;
+    }
+    &-img {
+      width: 4rem;
+    }
+  }
+
+  &__main-links {
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__main-link {
+    font-size: 1.8rem;
+    color: v.$primary-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+  }
+}

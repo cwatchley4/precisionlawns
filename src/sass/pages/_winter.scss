@@ -1,0 +1,79 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+/* WINTER PAGE STYLES */
+
+.hero {
+  &--winter {
+    background-image: url(../assets/images/holiday-lights.webp);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    @include m.flex-center(column);
+    text-align: center;
+
+    &__title {
+      padding: 1rem 3rem;
+      @include m.title-text(8rem);
+    }
+
+    &__subtitle {
+      padding: 0 3rem;
+      @include m.title-text(4rem);
+    }
+  }
+}
+
+.winter-header,
+.winter-footer {
+  background-color: v.$winter-color;
+}
+
+.winter-header .logo img {
+  width: 3rem;
+}
+
+.winter-header .links a {
+  color: v.$white-color;
+}
+
+.page-hero--winter {
+  background-image: url(../assets/images/holiday-lights.webp);
+}
+
+.snow-removal {
+  padding-bottom: 0;
+  @include m.flex-center(column);
+  @include m.section-layout;
+  padding-bottom: 0;
+}
+
+.snow-removal__container {
+  @include m.flex-center(row);
+  gap: 2rem;
+  margin: 3rem 0;
+  max-width: 110rem;
+}
+
+.snow-removal__description {
+  flex: 1;
+  background-color: v.$light-gray-color;
+  padding: 1rem;
+  border-radius: v.$border-radius;
+}
+
+.snow-removal__img-container {
+  flex: 1;
+}
+
+.snow-removal img,
+.holiday-lighting img {
+  width: 100%;
+  border-radius: v.$border-radius;
+}
+
+@media (max-width: 520px) {
+  .snow-removal__container {
+    flex-direction: column;
+  }
+}

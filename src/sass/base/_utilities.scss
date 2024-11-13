@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as v;
+
+.highlight {
+  color: v.$highlight-color;
+  font-weight: 700;
+}
+
+.lazy_img {
+  filter: blur(0.6rem);
+  transition: ease-in-out 0.5s;
+
+  &--loaded {
+    filter: blur(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

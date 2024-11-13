@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as v;
+
+.header {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  background-color: v.$white-color;
+  box-shadow: 0 -0.6rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.header--sticky {
+  z-index: 10;
+  width: 100%;
+  background-color: v.$white-color;
+  box-shadow: 0 -0.6rem 1rem 0.5rem rgba(0, 0, 0, 0.2);
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
+}

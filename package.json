@@ -4,7 +4,10 @@
   "description": "Precision Lawns Canton, IL website",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass sass/main.scss css/style.css -w"
+    "compile:sass": "sass sass/main.scss css/style.css -w",
+    "start": "parcel src/index.html src/pages/*.html",
+    "build": "parcel build src/index.html src/pages/*.html",
+    "clear": "rm -rf .parcel-cache"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,13 @@
   },
   "homepage": "https://github.com/cwatchley4/precisionlawns#readme",
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/transformer-jsonld": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.12.0",
+    "parcel": "^2.12.0",
     "sass": "^1.80.3"
   }
 }

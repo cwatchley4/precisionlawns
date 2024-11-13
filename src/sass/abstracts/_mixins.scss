@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as v;
+
+@mixin flex-center($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-layout {
+  padding: 7rem 2rem;
+  gap: 2rem;
+}
+
+@mixin title-text($font-size) {
+  font-size: $font-size;
+  font-weight: 600;
+  color: v.$white-color;
+  text-shadow: v.$text-shadow v.$text-shadow-color;
+}

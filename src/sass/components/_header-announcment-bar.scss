@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as v;
+
+.header__announcement-bar {
+  background: linear-gradient(to bottom right, #53ae4d, #73d56c);
+  color: v.$white-color;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-around;
+
+  &-link {
+    color: v.$white-color;
+    font-size: 1.5rem;
+
+    &-icon {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header__announcement-bar-text {
+    display: none;
+  }
+}

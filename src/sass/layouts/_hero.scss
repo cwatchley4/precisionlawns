@@ -1,0 +1,85 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.hero {
+  height: 100vh;
+  @include m.flex-center(column);
+  text-align: center;
+  color: v.$white-color;
+}
+
+.hero__video {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero__title {
+  font-size: 3vw;
+  padding: 0 3rem;
+  text-shadow: v.$text-shadow v.$text-shadow-color;
+  z-index: 1;
+  font-weight: normal;
+}
+
+.hero__text {
+  margin: 1rem 1rem 4rem;
+  z-index: 1;
+}
+
+.hero__tagline-1,
+.hero__tagline-2 {
+  text-shadow: v.$text-shadow v.$text-shadow-color;
+  text-transform: uppercase;
+  line-height: 90%;
+}
+
+.hero__tagline-1 {
+  font-size: 5.5vw;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero__tagline-2 {
+  font-size: 5vw;
+}
+
+.hero__underline-1,
+.hero__underline-2 {
+  position: relative;
+}
+
+.hero__underline-1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  background-position: center;
+  left: 0;
+  bottom: 0;
+  transform: translateY(35%);
+  z-index: -1;
+  background-image: url(../assets/images/underline.svg);
+}
+
+.hero__underline-2::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  background-position: center;
+  left: 0;
+  bottom: 0;
+  transform: translateY(35%);
+  z-index: -1;
+  background-image: url(../assets/images/underline-2.svg);
+}
+
+.hero__btns {
+  @include m.flex-center(column);
+}
