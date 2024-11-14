@@ -2,10 +2,9 @@
   "name": "precisionlawns",
   "version": "1.0.0",
   "description": "Precision Lawns Canton, IL website",
-  "main": "index.js",
   "scripts": {
     "compile:sass": "sass sass/main.scss css/style.css -w",
-    "start": "parcel src/index.html src/pages/*.html",
+    "start": "parcel src/index.html",
     "build": "parcel build src/index.html src/pages/*.html",
     "clear": "rm -rf .parcel-cache"
   },
