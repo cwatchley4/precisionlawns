@@ -593,6 +593,8 @@ var _imageViewJs = require("./views/imageView.js");
 var _imageViewJsDefault = parcelHelpers.interopDefault(_imageViewJs);
 var _servicesViewJs = require("./views/servicesView.js");
 var _servicesViewJsDefault = parcelHelpers.interopDefault(_servicesViewJs);
+var _weatherViewJs = require("./views/weatherView.js");
+var _weatherViewJsDefault = parcelHelpers.interopDefault(_weatherViewJs);
 "use strict";
 const controlToggleMobileMenu = function() {
     _modelJs.toggleMenuState();
@@ -601,25 +603,77 @@ const controlToggleMobileMenu = function() {
 const controlServices = function(clickedBtn) {
     (0, _servicesViewJsDefault.default).toggleActiveButton(clickedBtn);
 };
-const init = function() {
+const controlWeather = async function() {
+    try {
+        await _modelJs.loadWeather();
+        (0, _weatherViewJsDefault.default).render(_modelJs.state.weather);
+    } catch (err) {
+        console.error(err);
+        (0, _weatherViewJsDefault.default).renderError();
+    }
+};
+const init = async function() {
     (0, _navbarViewJsDefault.default).addHandlerToggle(controlToggleMobileMenu);
     (0, _navbarViewJsDefault.default).initStickyNav();
     (0, _imageViewJsDefault.default).initLazyLoad();
+    await controlWeather();
     if (document.querySelector(".services__list")) (0, _servicesViewJsDefault.default).addClickHandler(controlServices);
 };
 init();
 
-},{"../sass/main.scss":"dFl68","./model.js":"Y4A21","./views/navbarView.js":"xAXOZ","./views/imageView.js":"gCt5I","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./views/servicesView.js":"2voDy"}],"dFl68":[function() {},{}],"Y4A21":[function(require,module,exports) {
+},{"../sass/main.scss":"dFl68","./model.js":"Y4A21","./views/navbarView.js":"xAXOZ","./views/imageView.js":"gCt5I","./views/servicesView.js":"2voDy","./views/weatherView.js":"jcuJR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dFl68":[function() {},{}],"Y4A21":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "toggleMenuState", ()=>toggleMenuState);
+parcelHelpers.export(exports, "loadWeather", ()=>loadWeather);
+var _configJs = require("./config.js");
 const state = {
-    isMenuOpen: false
+    isMenuOpen: false,
+    weather: {
+        current: {},
+        minutely: {}
+    }
 };
 function toggleMenuState() {
     state.isMenuOpen = !state.isMenuOpen;
 }
+const createCurrentWeatherObject = function(data) {
+    const { current } = data;
+    return {
+        feelsLike: `${Math.round(current.feels_like)}\xb0F in Canton`,
+        description: current.weather[0].description,
+        icon: current.weather[0].icon
+    };
+};
+const createMinutelyWeatherString = function(data) {
+    const { minutely } = data;
+    const rainMinute = minutely?.find((minute)=>minute.precipitation > 0);
+    if (rainMinute) {
+        const currentTime = Math.floor(Date.now() / 1000);
+        const minutesUntilRain = Math.round((rainMinute.dt - currentTime) / 60);
+        return `Rain starting in ${minutesUntilRain} minutes.`;
+    } else return "No rain expected in the next hour.";
+};
+const loadWeather = async function() {
+    try {
+        const res = await fetch(`${(0, _configJs.API_URL)}${(0, _configJs.API_KEY)}`);
+        const data = await res.json();
+        if (!res.ok) throw new Error("Failed to fetch weather data");
+        state.weather.current = createCurrentWeatherObject(data);
+        state.weather.minutely = createMinutelyWeatherString(data);
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+},{"./config.js":"k5Hzs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k5Hzs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "API_KEY", ()=>API_KEY);
+parcelHelpers.export(exports, "API_URL", ()=>API_URL);
+const API_KEY = "af60b2f2f7d84ec266abbe85e39f343e";
+const API_URL = "https://api.openweathermap.org/data/3.0/onecall?lat=40.5581&lon=-90.0351&units=imperial&appid=";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -677,7 +731,6 @@ class NavbarView extends (0, _viewsJsDefault.default) {
     }
     render(data) {
         this._data = data;
-        console.log("Navbar data:", this._data);
         this._toggleMobileMenuIcon();
     }
     _toggleMobileMenuIcon() {
@@ -719,6 +772,12 @@ class Views {
     _data;
     render(data) {
         this._data = data;
+        const markup = this._generateMarkup();
+        this.clear();
+        this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
+    clear() {
+        this._parentElement.innerHTML = "";
     }
 }
 exports.default = Views;
@@ -755,7 +814,7 @@ class ImageView extends (0, _viewsJsDefault.default) {
 }
 exports.default = new ImageView();
 
-},{"./Views.js":"tgSJX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../helpers.js":"hGI1E"}],"hGI1E":[function(require,module,exports) {
+},{"./Views.js":"tgSJX","../helpers.js":"hGI1E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hGI1E":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "loadImage", ()=>loadImage);
@@ -784,7 +843,7 @@ function loadImage(imageName) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/images/sign.jpeg":"lLSk2","../assets/images/ventrac.jpg":"huhlA","../assets/images/plow.webp":"a2th4","../assets/images/stripes2.webp":"hhg6d","../assets/images/stripes3.webp":"8Q9il"}],"lLSk2":[function(require,module,exports) {
+},{"../assets/images/sign.jpeg":"lLSk2","../assets/images/ventrac.jpg":"huhlA","../assets/images/plow.webp":"a2th4","../assets/images/stripes2.webp":"hhg6d","../assets/images/stripes3.webp":"8Q9il","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lLSk2":[function(require,module,exports) {
 module.exports = require("240f8711a7efc17d").getBundleURL("hWUTQ") + "sign.90e0caf5.jpeg" + "?" + Date.now();
 
 },{"240f8711a7efc17d":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -852,7 +911,7 @@ class ServicesView extends (0, _viewsDefault.default) {
         window.addEventListener("resize", this._handleResize.bind(this));
     }
     _handleResize() {
-        if (window.innerWidth <= 1130) servicesButton.forEach((b)=>b.style.transform = "translateY(0)");
+        if (window.innerWidth <= 1130) this.#servicesButtons.forEach((b)=>b.style.transform = "translateY(0)");
     }
     addClickHandler(handler) {
         this.#parentElement.addEventListener("click", function(e) {
@@ -877,6 +936,29 @@ class ServicesView extends (0, _viewsDefault.default) {
 }
 exports.default = new ServicesView();
 
-},{"./Views":"tgSJX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hycaY","aenu9"], "aenu9", "parcelRequire177f")
+},{"./Views":"tgSJX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jcuJR":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _viewsJs = require("./Views.js");
+var _viewsJsDefault = parcelHelpers.interopDefault(_viewsJs);
+class WeatherView extends (0, _viewsJsDefault.default) {
+    _parentElement;
+    constructor(){
+        super();
+        this._parentElement = document.querySelector(".footer__weather");
+    }
+    _generateMarkup() {
+        return `
+    <p class="footer__weather-text">Feels like ${this._data.current.feelsLike}.</p>
+    <p class="footer__weather-text">${this._data.minutely}</p>
+    `;
+    }
+    renderError(message = "Something went wrong while fetching weather data.") {
+        this._parentElement.textContent = message;
+    }
+}
+exports.default = new WeatherView();
+
+},{"./Views.js":"tgSJX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hycaY","aenu9"], "aenu9", "parcelRequire177f")
 
 //# sourceMappingURL=index.e37f48ea.js.map

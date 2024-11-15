@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-page="home">
   <head>
+    <!-- 1. Meta Tags for Character Encoding and Viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Precision Lawns | Lawn Care in Canton, IL</title>
@@ -8,23 +9,25 @@
       name="description"
       content="We are a lawn care provider in Canton, IL. There's no job too big or small for us."
     />
+
+    <!-- 2. Open Graph Meta Tags for Social Sharing -->
     <meta
       property="og:title"
       content="Precision Lawns | Lawn Care in Canton, IL"
     />
     <meta
-      property="og:image"
-      content="https://i.ibb.co/VQp4dRS/social-share.png"
-    />
-    <meta
       property="og:description"
       content="We are a lawn care provider based in Canton, IL. There's no job too big or small for us."
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/VQp4dRS/social-share.png"
     />
     <meta property="og:url" content="https://precisionlawns309.com" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <!-- BEFORE PARCEL -->
-    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+
+    <!-- 3. Favicon and Icons -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -50,29 +53,39 @@
     />
     <meta name="msapplication-TileColor" content="#f8f8f8" />
     <meta name="theme-color" content="#f8f8f8" />
+
+    <!-- 4. Fonts (Preload Key Fonts for Performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://use.typekit.net/efq7til.css" />
-    <script defer type="module" src="./js/controller.js"></script>
-    <script
-      src="https://kit.fontawesome.com/bc134222d9.js"
-      crossorigin="anonymous"
-    ></script>
+
+    <!-- 5. External CSS -->
     <link
       rel="stylesheet"
       media="screen"
       href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css"
     />
-    <script
-      src="//code.tidio.co/sixvgwmragqepba7kxljenid0ulocqix.js"
-      async
-    ></script>
+
+    <!-- 6. JavaScript Libraries (Async for Non-Critical Scripts) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-Y22RPT6MQG"
     ></script>
+    <script
+      async
+      src="//code.tidio.co/sixvgwmragqepba7kxljenid0ulocqix.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/bc134222d9.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- 7. Inline Scripts (Analytics and Tracking) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -81,6 +94,7 @@
       gtag("js", new Date());
       gtag("config", "G-Y22RPT6MQG");
     </script>
+
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -93,6 +107,8 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-PRRH5KGZ");
     </script>
+
+    <!-- 8. Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -110,6 +126,9 @@
         }
       }
     </script>
+
+    <!-- 9. Main JavaScript File (Defer Loading) -->
+    <script defer type="module" src="./js/controller.js"></script>
   </head>
   <body>
     <noscript
@@ -120,21 +139,6 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <!-- <div class="modal hidden">
-      <i class="modal__close fa-solid fa-xmark"></i>
-      <div class="modal__content">
-        <h2 class="modal__title">Spring is Coming...</h2>
-        <p class="modal__description">
-          Warmer weather is around the corner, which means it's almost time for
-          mowing season and spring clean ups. Let us take care of that for you.
-          To book a free assessment, click the button below.
-        </p>
-        <a class="btn btn--white btn--modal" href="/book"
-          >Book a Free Assessment</a
-        >
-      </div>
-    </div> -->
-    <!-- <div class="modal-overlay hidden"></div> -->
     <header class="header">
       <div class="header__announcement-bar">
         <a
@@ -419,6 +423,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="footer__weather">
+        <p class="footer__weather-text"></p>
       </div>
       <p class="footer__copyright">
         © Copyright 2023. Made by

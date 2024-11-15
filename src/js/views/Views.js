@@ -3,5 +3,14 @@ export default class Views {
 
   render(data) {
     this._data = data;
+    const markup = this._generateMarkup();
+
+    this.clear();
+
+    this._parentElement.insertAdjacentHTML("afterbegin", markup);
+  }
+
+  clear() {
+    this._parentElement.innerHTML = "";
   }
 }

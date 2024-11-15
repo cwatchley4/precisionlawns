@@ -19,7 +19,9 @@ class ServicesView extends Views {
 
   _handleResize() {
     if (window.innerWidth <= 1130) {
-      servicesButton.forEach((b) => (b.style.transform = "translateY(0)"));
+      this.#servicesButtons.forEach(
+        (b) => (b.style.transform = "translateY(0)")
+      );
     }
   }
 

@@ -79,6 +79,10 @@
       }
     }
   }
+  &__weather-text {
+    color: v.$white-color;
+    text-align: center;
+  }
   &__copyright {
     font-size: 1.6rem;
     text-align: center;

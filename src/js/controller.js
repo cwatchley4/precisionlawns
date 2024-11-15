@@ -6,6 +6,7 @@ import * as model from "./model.js";
 import navbarView from "./views/navbarView.js";
 import imageView from "./views/imageView.js";
 import servicesView from "./views/servicesView.js";
+import weatherView from "./views/weatherView.js";
 
 const controlToggleMobileMenu = function () {
   model.toggleMenuState();
@@ -16,11 +17,22 @@ const controlServices = function (clickedBtn) {
   servicesView.toggleActiveButton(clickedBtn);
 };
 
-const init = function () {
+const controlWeather = async function () {
+  try {
+    await model.loadWeather();
+    weatherView.render(model.state.weather);
+  } catch (err) {
+    console.error(err);
+    weatherView.renderError();
+  }
+};
+
+const init = async function () {
   navbarView.addHandlerToggle(controlToggleMobileMenu);
   navbarView.initStickyNav();
 
   imageView.initLazyLoad();
+  await controlWeather();
 
   if (document.querySelector(".services__list"))
     servicesView.addClickHandler(controlServices);

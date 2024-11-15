@@ -25,7 +25,6 @@ class NavbarView extends Views {
 
   render(data) {
     this._data = data;
-    console.log("Navbar data:", this._data);
     this._toggleMobileMenuIcon();
   }
 
