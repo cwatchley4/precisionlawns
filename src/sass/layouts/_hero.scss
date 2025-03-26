@@ -16,11 +16,13 @@
 }
 
 .hero__title {
-  font-size: 3vw;
+  font-size: 4vw;
   padding: 0 3rem;
   text-shadow: v.$text-shadow v.$text-shadow-color;
   z-index: 1;
   font-weight: normal;
+  line-height: 1;
+  margin-bottom: 2rem;
 }
 
 .hero__text {

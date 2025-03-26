@@ -16,10 +16,22 @@
   justify-content: center;
 }
 
-.modal__description,
-.modal__text,
-.btn--modal {
+.modal__title,
+.modal__text {
   color: white;
+}
+
+.modal__title {
+  font-size: 3rem;
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
 }
 
 .modal__overlay,
@@ -34,7 +46,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(0.3rem);
-  z-index: 5;
+  z-index: 10;
 }
 
 .modal__close {

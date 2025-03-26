@@ -5,6 +5,11 @@
   font-weight: 700;
 }
 
+.special-link {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .lazy_img {
   filter: blur(0.6rem);
   transition: ease-in-out 0.5s;
@@ -15,7 +20,7 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .no-scroll {

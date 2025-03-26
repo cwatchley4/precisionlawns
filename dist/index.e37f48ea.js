@@ -587,6 +587,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _mainScss = require("../sass/main.scss");
 var _modelJs = require("./model.js");
+var _modalViewJs = require("./views/modalView.js");
+var _modalViewJsDefault = parcelHelpers.interopDefault(_modalViewJs);
 var _navbarViewJs = require("./views/navbarView.js");
 var _navbarViewJsDefault = parcelHelpers.interopDefault(_navbarViewJs);
 var _imageViewJs = require("./views/imageView.js");
@@ -612,16 +614,20 @@ const controlWeather = async function() {
         (0, _weatherViewJsDefault.default).renderError();
     }
 };
+const controlCloseModal = function() {
+    (0, _modalViewJsDefault.default).closeModal();
+};
 const init = async function() {
     (0, _navbarViewJsDefault.default).addHandlerToggle(controlToggleMobileMenu);
     (0, _navbarViewJsDefault.default).initStickyNav();
+    (0, _modalViewJsDefault.default).addHandlerCloseModal(controlCloseModal);
     (0, _imageViewJsDefault.default).initLazyLoad();
     await controlWeather();
     if (document.querySelector(".services__list")) (0, _servicesViewJsDefault.default).addClickHandler(controlServices);
 };
 init();
 
-},{"../sass/main.scss":"dFl68","./model.js":"Y4A21","./views/navbarView.js":"xAXOZ","./views/imageView.js":"gCt5I","./views/servicesView.js":"2voDy","./views/weatherView.js":"jcuJR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dFl68":[function() {},{}],"Y4A21":[function(require,module,exports) {
+},{"../sass/main.scss":"dFl68","./model.js":"Y4A21","./views/navbarView.js":"xAXOZ","./views/imageView.js":"gCt5I","./views/servicesView.js":"2voDy","./views/weatherView.js":"jcuJR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./views/modalView.js":"8QpnA"}],"dFl68":[function() {},{}],"Y4A21":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
@@ -958,6 +964,32 @@ class WeatherView extends (0, _viewsJsDefault.default) {
     }
 }
 exports.default = new WeatherView();
+
+},{"./Views.js":"tgSJX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8QpnA":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _viewsJs = require("./Views.js");
+var _viewsJsDefault = parcelHelpers.interopDefault(_viewsJs);
+class ModalView extends (0, _viewsJsDefault.default) {
+    modal;
+    overlay;
+    modalCloseBtn;
+    constructor(){
+        super();
+        this.modal = document.querySelector(".modal");
+        this.overlay = document.querySelector(".modal__overlay");
+        this.modalCloseBtn = document.querySelector(".modal__close");
+    }
+    addHandlerCloseModal(handler) {
+        if (!this.modal) return;
+        this.modalCloseBtn.addEventListener("click", handler);
+    }
+    closeModal() {
+        this.modal.classList.add("hidden");
+        this.overlay.classList.add("hidden");
+    }
+}
+exports.default = new ModalView();
 
 },{"./Views.js":"tgSJX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hycaY","aenu9"], "aenu9", "parcelRequire177f")
 

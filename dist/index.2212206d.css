@@ -43,7 +43,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media (width <= 900px) {
   html {
-    font-size: 50%;
+    font-size: 60%;
   }
 
   .navbar__main-links {
@@ -57,13 +57,13 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media (width <= 720px) {
   html {
-    font-size: 40%;
+    font-size: 55%;
   }
 }
 
 @media (width <= 420px) {
   html {
-    font-size: 30%;
+    font-size: 40%;
   }
 }
 
@@ -90,12 +90,17 @@ h3 {
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .highlight {
   color: #53ae4d;
   font-weight: 700;
+}
+
+.special-link {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .lazy_img {
@@ -108,7 +113,7 @@ p {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .no-scroll {
@@ -148,7 +153,7 @@ p {
 
 .btn--hero {
   margin: .5rem;
-  font-size: 2.5vw;
+  font-size: 2rem;
 }
 
 .btn:hover {
@@ -271,7 +276,7 @@ p {
   text-transform: capitalize;
   color: #53ae4d;
   font-family: mrs-eaves, serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 400;
 }
 
@@ -287,7 +292,7 @@ p {
 .navbar__main-link {
   color: #53ae4d;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   position: relative;
 }
@@ -329,7 +334,7 @@ p {
   color: #53ae4d;
   cursor: pointer;
   z-index: 5;
-  font-size: 1.5rem;
+  font-size: 3rem;
   display: none;
 }
 
@@ -349,8 +354,21 @@ p {
   box-shadow: 0 3rem 5rem #0000004d;
 }
 
-.modal__description, .modal__text, .btn--modal {
+.modal__title, .modal__text {
   color: #fff;
+}
+
+.modal__title {
+  font-size: 3rem;
+}
+
+.modal__container {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  display: flex;
 }
 
 .modal__overlay, .modal__close {
@@ -359,7 +377,7 @@ p {
 
 .modal__overlay {
   backdrop-filter: blur(.3rem);
-  z-index: 5;
+  z-index: 10;
   background-color: #0009;
   width: 100%;
   height: 100%;
@@ -526,9 +544,11 @@ p {
 .hero__title {
   text-shadow: .2rem .2rem .5rem #0000004d;
   z-index: 1;
+  margin-bottom: 2rem;
   padding: 0 3rem;
-  font-size: 3vw;
+  font-size: 4vw;
   font-weight: normal;
+  line-height: 1;
 }
 
 .hero__text {

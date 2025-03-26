@@ -3,6 +3,7 @@
 import "../sass/main.scss";
 
 import * as model from "./model.js";
+import modalView from "./views/modalView.js";
 import navbarView from "./views/navbarView.js";
 import imageView from "./views/imageView.js";
 import servicesView from "./views/servicesView.js";
@@ -27,9 +28,15 @@ const controlWeather = async function () {
   }
 };
 
+const controlCloseModal = function () {
+  modalView.closeModal();
+};
+
 const init = async function () {
   navbarView.addHandlerToggle(controlToggleMobileMenu);
   navbarView.initStickyNav();
+
+  modalView.addHandlerCloseModal(controlCloseModal);
 
   imageView.initLazyLoad();
   await controlWeather();
